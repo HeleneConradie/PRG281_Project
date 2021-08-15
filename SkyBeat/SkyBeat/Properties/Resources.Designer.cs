@@ -93,6 +93,16 @@ namespace SkyBeat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Music_Notes {
+            get {
+                object obj = ResourceManager.GetObject("Music Notes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ShowPass {
             get {
                 object obj = ResourceManager.GetObject("ShowPass", resourceCulture);

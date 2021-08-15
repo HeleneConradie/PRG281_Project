@@ -33,6 +33,7 @@ namespace SkyBeat
             this.btnSingle = new System.Windows.Forms.Button();
             this.btnMulti = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblHeadingM2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@ namespace SkyBeat
             // 
             this.btnSingle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSingle.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSingle.Location = new System.Drawing.Point(242, 118);
+            this.btnSingle.Location = new System.Drawing.Point(251, 133);
             this.btnSingle.Name = "btnSingle";
             this.btnSingle.Size = new System.Drawing.Size(150, 30);
             this.btnSingle.TabIndex = 4;
@@ -64,7 +65,7 @@ namespace SkyBeat
             // 
             this.btnMulti.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnMulti.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMulti.Location = new System.Drawing.Point(242, 198);
+            this.btnMulti.Location = new System.Drawing.Point(251, 199);
             this.btnMulti.Name = "btnMulti";
             this.btnMulti.Size = new System.Drawing.Size(150, 30);
             this.btnMulti.TabIndex = 5;
@@ -84,12 +85,24 @@ namespace SkyBeat
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // lblHeadingM2
+            // 
+            this.lblHeadingM2.AutoSize = true;
+            this.lblHeadingM2.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeadingM2.ForeColor = System.Drawing.Color.White;
+            this.lblHeadingM2.Location = new System.Drawing.Point(252, 72);
+            this.lblHeadingM2.Name = "lblHeadingM2";
+            this.lblHeadingM2.Size = new System.Drawing.Size(171, 23);
+            this.lblHeadingM2.TabIndex = 7;
+            this.lblHeadingM2.Text = "Choose your mode:";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(664, 401);
+            this.Controls.Add(this.lblHeadingM2);
             this.Controls.Add(this.btnMulti);
             this.Controls.Add(this.btnSingle);
             this.Controls.Add(this.lblMain);
@@ -113,6 +126,7 @@ namespace SkyBeat
         private System.Windows.Forms.Button btnSingle;
         private System.Windows.Forms.Button btnMulti;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblHeadingM2;
     }
 }
 
