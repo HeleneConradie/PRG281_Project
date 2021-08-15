@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace SkyBeat
 {
-    public partial class frmLogin : Form
+    public partial class frmStart : Form
     {
-        public frmLogin()
+        public frmStart()
         {
             InitializeComponent();
-        }
-
-        private void lblSignup_Click(object sender, EventArgs e)
-        {
-            this.Close();
-
         }
     }
 }

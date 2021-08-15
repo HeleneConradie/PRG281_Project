@@ -114,6 +114,7 @@ namespace SkyBeat
             this.lblSignup.Size = new System.Drawing.Size(120, 13);
             this.lblSignup.TabIndex = 9;
             this.lblSignup.Text = "Don\'t have an account?";
+            this.lblSignup.Click += new System.EventHandler(this.lblSignup_Click);
             // 
             // btnLogin
             // 
@@ -186,8 +187,11 @@ namespace SkyBeat
             this.Controls.Add(this.lblHeadingL1);
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(750, 400);
+            this.MinimumSize = new System.Drawing.Size(750, 400);
             this.Name = "frmLogin";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPass2)).EndInit();

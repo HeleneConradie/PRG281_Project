@@ -236,6 +236,7 @@
             this.btnCancel.TabIndex = 23;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblTnC
             // 
@@ -324,6 +325,7 @@
             this.MinimumSize = new System.Drawing.Size(750, 450);
             this.Name = "frmSignup";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign Up";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
