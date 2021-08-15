@@ -24,6 +24,9 @@ namespace SkyBeat
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            frmLogin login = new frmLogin();
+            this.Hide();
+            login.ShowDialog();
             this.Close();
         }
     }
