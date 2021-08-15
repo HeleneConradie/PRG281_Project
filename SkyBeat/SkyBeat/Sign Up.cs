@@ -16,5 +16,11 @@ namespace SkyBeat
         {
             InitializeComponent();
         }
+
+        private void lblID_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

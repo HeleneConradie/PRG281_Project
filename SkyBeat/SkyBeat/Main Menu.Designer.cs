@@ -52,7 +52,7 @@ namespace SkyBeat
             // btnSingle
             // 
             this.btnSingle.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSingle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSingle.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSingle.Location = new System.Drawing.Point(242, 118);
             this.btnSingle.Name = "btnSingle";
             this.btnSingle.Size = new System.Drawing.Size(150, 30);
@@ -63,7 +63,7 @@ namespace SkyBeat
             // btnMulti
             // 
             this.btnMulti.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnMulti.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMulti.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMulti.Location = new System.Drawing.Point(242, 198);
             this.btnMulti.Name = "btnMulti";
             this.btnMulti.Size = new System.Drawing.Size(150, 30);
