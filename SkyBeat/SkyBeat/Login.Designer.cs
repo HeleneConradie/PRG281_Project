@@ -46,6 +46,7 @@ namespace SkyBeat
             this.pnlPassword = new System.Windows.Forms.Panel();
             this.lblRights2 = new System.Windows.Forms.Label();
             this.lblDesign2 = new System.Windows.Forms.Label();
+            this.lblLoginHeading2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbEarphones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLockIcon)).BeginInit();
@@ -56,7 +57,7 @@ namespace SkyBeat
             // 
             this.lblLoginHeading1.AutoSize = true;
             this.lblLoginHeading1.Font = new System.Drawing.Font("Harrington", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoginHeading1.Location = new System.Drawing.Point(323, 9);
+            this.lblLoginHeading1.Location = new System.Drawing.Point(334, 27);
             this.lblLoginHeading1.Name = "lblLoginHeading1";
             this.lblLoginHeading1.Size = new System.Drawing.Size(87, 32);
             this.lblLoginHeading1.TabIndex = 0;
@@ -105,7 +106,7 @@ namespace SkyBeat
             // 
             this.lblForgotPass.AutoSize = true;
             this.lblForgotPass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblForgotPass.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgotPass.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForgotPass.Location = new System.Drawing.Point(317, 195);
             this.lblForgotPass.Name = "lblForgotPass";
             this.lblForgotPass.Size = new System.Drawing.Size(123, 13);
@@ -128,7 +129,7 @@ namespace SkyBeat
             // 
             this.btnLogin.BackColor = System.Drawing.Color.White;
             this.btnLogin.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(329, 268);
+            this.btnLogin.Location = new System.Drawing.Point(329, 273);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(125, 30);
             this.btnLogin.TabIndex = 10;
@@ -212,12 +213,23 @@ namespace SkyBeat
             this.lblDesign2.TabIndex = 15;
             this.lblDesign2.Text = "| Design by Helene Conradie, Henco De Lange, Hermann Smit";
             // 
+            // lblLoginHeading2
+            // 
+            this.lblLoginHeading2.AutoSize = true;
+            this.lblLoginHeading2.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginHeading2.Location = new System.Drawing.Point(12, 9);
+            this.lblLoginHeading2.Name = "lblLoginHeading2";
+            this.lblLoginHeading2.Size = new System.Drawing.Size(84, 24);
+            this.lblLoginHeading2.TabIndex = 16;
+            this.lblLoginHeading2.Text = "SkyBeat";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(734, 361);
+            this.Controls.Add(this.lblLoginHeading2);
             this.Controls.Add(this.lblDesign2);
             this.Controls.Add(this.lblRights2);
             this.Controls.Add(this.pnlPassword);
@@ -268,5 +280,6 @@ namespace SkyBeat
         private System.Windows.Forms.Panel pnlPassword;
         private System.Windows.Forms.Label lblRights2;
         private System.Windows.Forms.Label lblDesign2;
+        private System.Windows.Forms.Label lblLoginHeading2;
     }
 }

@@ -47,7 +47,7 @@ namespace SkyBeat
             this.lblMainHeading2.BackColor = System.Drawing.Color.Black;
             this.lblMainHeading2.Font = new System.Drawing.Font("Harrington", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMainHeading2.ForeColor = System.Drawing.Color.White;
-            this.lblMainHeading2.Location = new System.Drawing.Point(220, 48);
+            this.lblMainHeading2.Location = new System.Drawing.Point(220, 45);
             this.lblMainHeading2.Name = "lblMainHeading2";
             this.lblMainHeading2.Size = new System.Drawing.Size(220, 47);
             this.lblMainHeading2.TabIndex = 2;
@@ -104,7 +104,7 @@ namespace SkyBeat
             this.lblMainHeading1.AutoSize = true;
             this.lblMainHeading1.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMainHeading1.ForeColor = System.Drawing.Color.White;
-            this.lblMainHeading1.Location = new System.Drawing.Point(288, 9);
+            this.lblMainHeading1.Location = new System.Drawing.Point(12, 9);
             this.lblMainHeading1.Name = "lblMainHeading1";
             this.lblMainHeading1.Size = new System.Drawing.Size(84, 24);
             this.lblMainHeading1.TabIndex = 8;
@@ -153,7 +153,7 @@ namespace SkyBeat
             this.Name = "frmMain";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main Menu";
+            this.Text = "Choose Mode";
             ((System.ComponentModel.ISupportInitialize)(this.pbGuitar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

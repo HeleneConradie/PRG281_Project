@@ -31,6 +31,7 @@ namespace SkyBeat
         {
             this.lblReady = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
+            this.lblStartHeading = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblReady
@@ -54,12 +55,23 @@ namespace SkyBeat
             this.btnStart.Text = "START";
             this.btnStart.UseVisualStyleBackColor = false;
             // 
+            // lblStartHeading
+            // 
+            this.lblStartHeading.AutoSize = true;
+            this.lblStartHeading.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartHeading.Location = new System.Drawing.Point(12, 9);
+            this.lblStartHeading.Name = "lblStartHeading";
+            this.lblStartHeading.Size = new System.Drawing.Size(77, 21);
+            this.lblStartHeading.TabIndex = 2;
+            this.lblStartHeading.Text = "SkyBeat";
+            // 
             // frmStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(334, 261);
+            this.Controls.Add(this.lblStartHeading);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblReady);
             this.Location = new System.Drawing.Point(350, 300);
@@ -79,5 +91,6 @@ namespace SkyBeat
 
         private System.Windows.Forms.Label lblReady;
         private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Label lblStartHeading;
     }
 }

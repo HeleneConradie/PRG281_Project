@@ -10,20 +10,13 @@ using System.Windows.Forms;
 
 namespace SkyBeat
 {
-    public partial class frmLogin : Form
+    public partial class frmMainGameForm : Form
     {
-        public frmLogin()
+        public frmMainGameForm()
         {
             InitializeComponent();
         }
 
-        private void lblSignup_Click(object sender, EventArgs e)
-        {
-            frmSignup signup = new frmSignup();
-            this.Hide();
-            signup.Show();
-            this.Close();
-
-        }
+       
     }
 }
