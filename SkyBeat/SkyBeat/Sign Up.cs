@@ -29,5 +29,11 @@ namespace SkyBeat
             login.ShowDialog();
             this.Close();
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            string message = "Make use of Characters and Numbers";
+            MessageBox.Show(message, "Hint");
+        }
     }
 }

@@ -42,6 +42,8 @@ namespace SkyBeat
             this.pbPass2 = new System.Windows.Forms.PictureBox();
             this.pbPass = new System.Windows.Forms.PictureBox();
             this.pbUsername = new System.Windows.Forms.PictureBox();
+            this.pnlUsername = new System.Windows.Forms.Panel();
+            this.pnlPassword = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPass2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPass)).BeginInit();
@@ -70,9 +72,11 @@ namespace SkyBeat
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(320, 103);
+            this.txtUsername.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Location = new System.Drawing.Point(320, 107);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(150, 20);
+            this.txtUsername.Size = new System.Drawing.Size(150, 13);
             this.txtUsername.TabIndex = 3;
             // 
             // lblPass
@@ -87,10 +91,12 @@ namespace SkyBeat
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(320, 157);
+            this.txtPass.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPass.Location = new System.Drawing.Point(320, 161);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(150, 20);
+            this.txtPass.Size = new System.Drawing.Size(150, 13);
             this.txtPass.TabIndex = 5;
             // 
             // lblPassword2
@@ -168,12 +174,30 @@ namespace SkyBeat
             this.pbUsername.TabIndex = 2;
             this.pbUsername.TabStop = false;
             // 
+            // pnlUsername
+            // 
+            this.pnlUsername.BackColor = System.Drawing.Color.Black;
+            this.pnlUsername.Location = new System.Drawing.Point(320, 122);
+            this.pnlUsername.Name = "pnlUsername";
+            this.pnlUsername.Size = new System.Drawing.Size(150, 1);
+            this.pnlUsername.TabIndex = 12;
+            // 
+            // pnlPassword
+            // 
+            this.pnlPassword.BackColor = System.Drawing.Color.Black;
+            this.pnlPassword.Location = new System.Drawing.Point(320, 176);
+            this.pnlPassword.Name = "pnlPassword";
+            this.pnlPassword.Size = new System.Drawing.Size(150, 1);
+            this.pnlPassword.TabIndex = 13;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(734, 361);
+            this.Controls.Add(this.pnlPassword);
+            this.Controls.Add(this.pnlUsername);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblSignup);
@@ -216,5 +240,7 @@ namespace SkyBeat
         private System.Windows.Forms.Label lblSignup;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pnlUsername;
+        private System.Windows.Forms.Panel pnlPassword;
     }
 }
