@@ -34,6 +34,9 @@ namespace SkyBeat
             this.btnMulti = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblHeadingM2 = new System.Windows.Forms.Label();
+            this.lblHeading3 = new System.Windows.Forms.Label();
+            this.lblRights = new System.Windows.Forms.Label();
+            this.lblDesignby = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +47,7 @@ namespace SkyBeat
             this.lblMain.BackColor = System.Drawing.Color.Black;
             this.lblMain.Font = new System.Drawing.Font("Harrington", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMain.ForeColor = System.Drawing.Color.White;
-            this.lblMain.Location = new System.Drawing.Point(220, 9);
+            this.lblMain.Location = new System.Drawing.Point(220, 48);
             this.lblMain.Name = "lblMain";
             this.lblMain.Size = new System.Drawing.Size(220, 47);
             this.lblMain.TabIndex = 2;
@@ -54,7 +57,7 @@ namespace SkyBeat
             // 
             this.btnSingle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSingle.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSingle.Location = new System.Drawing.Point(251, 133);
+            this.btnSingle.Location = new System.Drawing.Point(251, 156);
             this.btnSingle.Name = "btnSingle";
             this.btnSingle.Size = new System.Drawing.Size(150, 30);
             this.btnSingle.TabIndex = 4;
@@ -65,7 +68,7 @@ namespace SkyBeat
             // 
             this.btnMulti.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnMulti.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMulti.Location = new System.Drawing.Point(251, 199);
+            this.btnMulti.Location = new System.Drawing.Point(251, 212);
             this.btnMulti.Name = "btnMulti";
             this.btnMulti.Size = new System.Drawing.Size(150, 30);
             this.btnMulti.TabIndex = 5;
@@ -90,11 +93,44 @@ namespace SkyBeat
             this.lblHeadingM2.AutoSize = true;
             this.lblHeadingM2.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeadingM2.ForeColor = System.Drawing.Color.White;
-            this.lblHeadingM2.Location = new System.Drawing.Point(252, 72);
+            this.lblHeadingM2.Location = new System.Drawing.Point(247, 107);
             this.lblHeadingM2.Name = "lblHeadingM2";
             this.lblHeadingM2.Size = new System.Drawing.Size(171, 23);
             this.lblHeadingM2.TabIndex = 7;
             this.lblHeadingM2.Text = "Choose your mode:";
+            // 
+            // lblHeading3
+            // 
+            this.lblHeading3.AutoSize = true;
+            this.lblHeading3.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeading3.ForeColor = System.Drawing.Color.White;
+            this.lblHeading3.Location = new System.Drawing.Point(288, 9);
+            this.lblHeading3.Name = "lblHeading3";
+            this.lblHeading3.Size = new System.Drawing.Size(84, 24);
+            this.lblHeading3.TabIndex = 8;
+            this.lblHeading3.Text = "SkyBeat";
+            // 
+            // lblRights
+            // 
+            this.lblRights.AutoSize = true;
+            this.lblRights.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRights.ForeColor = System.Drawing.Color.White;
+            this.lblRights.Location = new System.Drawing.Point(12, 378);
+            this.lblRights.Name = "lblRights";
+            this.lblRights.Size = new System.Drawing.Size(193, 14);
+            this.lblRights.TabIndex = 9;
+            this.lblRights.Text = "@ 2021 SkyBeat. All rights reserved";
+            // 
+            // lblDesignby
+            // 
+            this.lblDesignby.AutoSize = true;
+            this.lblDesignby.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesignby.ForeColor = System.Drawing.Color.White;
+            this.lblDesignby.Location = new System.Drawing.Point(202, 378);
+            this.lblDesignby.Name = "lblDesignby";
+            this.lblDesignby.Size = new System.Drawing.Size(328, 14);
+            this.lblDesignby.TabIndex = 10;
+            this.lblDesignby.Text = "| Design by Helene Conradie, Henco De Lange, Hermann Smit";
             // 
             // frmMain
             // 
@@ -102,6 +138,9 @@ namespace SkyBeat
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(664, 401);
+            this.Controls.Add(this.lblDesignby);
+            this.Controls.Add(this.lblRights);
+            this.Controls.Add(this.lblHeading3);
             this.Controls.Add(this.lblHeadingM2);
             this.Controls.Add(this.btnMulti);
             this.Controls.Add(this.btnSingle);
@@ -127,6 +166,9 @@ namespace SkyBeat
         private System.Windows.Forms.Button btnMulti;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblHeadingM2;
+        private System.Windows.Forms.Label lblHeading3;
+        private System.Windows.Forms.Label lblRights;
+        private System.Windows.Forms.Label lblDesignby;
     }
 }
 
