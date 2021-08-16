@@ -29,26 +29,18 @@ namespace SkyBeat
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbArtist = new System.Windows.Forms.PictureBox();
             this.cb1 = new System.Windows.Forms.CheckBox();
             this.lblMainGameHeading1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTimer = new System.Windows.Forms.Label();
             this.cb2 = new System.Windows.Forms.CheckBox();
             this.cb3 = new System.Windows.Forms.CheckBox();
             this.cb4 = new System.Windows.Forms.CheckBox();
             this.cb5 = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbArtist)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbArtist = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbArtist)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbArtist
-            // 
-            this.pbArtist.Location = new System.Drawing.Point(12, 111);
-            this.pbArtist.Name = "pbArtist";
-            this.pbArtist.Size = new System.Drawing.Size(200, 150);
-            this.pbArtist.TabIndex = 0;
-            this.pbArtist.TabStop = false;
             // 
             // cb1
             // 
@@ -70,16 +62,6 @@ namespace SkyBeat
             this.lblMainGameHeading1.Size = new System.Drawing.Size(77, 21);
             this.lblMainGameHeading1.TabIndex = 2;
             this.lblMainGameHeading1.Text = "SkyBeat";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SkyBeat.Properties.Resources.Music_Notes;
-            this.pictureBox1.Location = new System.Drawing.Point(168, 248);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(243, 165);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // lblTimer
             // 
@@ -135,6 +117,26 @@ namespace SkyBeat
             this.cb5.Text = "Hip Hop";
             this.cb5.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SkyBeat.Properties.Resources.Music_Notes;
+            this.pictureBox1.Location = new System.Drawing.Point(168, 248);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(243, 165);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pbArtist
+            // 
+            this.pbArtist.Image = global::SkyBeat.Properties.Resources.Elvis_Presley;
+            this.pbArtist.Location = new System.Drawing.Point(12, 105);
+            this.pbArtist.Name = "pbArtist";
+            this.pbArtist.Size = new System.Drawing.Size(200, 150);
+            this.pbArtist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbArtist.TabIndex = 0;
+            this.pbArtist.TabStop = false;
+            // 
             // frmMainGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,8 +159,8 @@ namespace SkyBeat
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainGameForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pbArtist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbArtist)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

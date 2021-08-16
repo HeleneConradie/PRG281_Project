@@ -143,5 +143,8 @@
   <ItemGroup>
     <None Include="Resources\Music Notes.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Elvis Presley.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

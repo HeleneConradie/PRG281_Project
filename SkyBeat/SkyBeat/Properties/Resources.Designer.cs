@@ -63,6 +63,16 @@ namespace SkyBeat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Elvis_Presley {
+            get {
+                object obj = ResourceManager.GetObject("Elvis Presley", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Guitar {
             get {
                 object obj = ResourceManager.GetObject("Guitar", resourceCulture);
