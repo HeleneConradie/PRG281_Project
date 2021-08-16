@@ -35,3 +35,4 @@ C:\Users\helen\OneDrive\Documents\BELGIUM CAMPUS\Second Year\PRG\PRG_281\PRG281_
 C:\Users\helen\OneDrive\Documents\BELGIUM CAMPUS\Second Year\PRG\PRG_281\PRG281_Project_Group_12\SkyBeat\SkyBeat\obj\Debug\SkyBeat.frmStart.resources
 C:\Users\helen\OneDrive\Documents\BELGIUM CAMPUS\Second Year\PRG\PRG_281\PRG281_Project_Group_12\SkyBeat\SkyBeat\obj\Debug\SkyBeat.frmTnC.resources
 C:\Users\helen\OneDrive\Documents\BELGIUM CAMPUS\Second Year\PRG\PRG_281\PRG281_Project_Group_12\SkyBeat\SkyBeat\obj\Debug\SkyBeat.frmMainGameForm.resources
+C:\Users\helen\OneDrive\Documents\BELGIUM CAMPUS\Second Year\PRG\PRG_281\PRG281_Project_Group_12\SkyBeat\SkyBeat\obj\Debug\SkyBeat.frmScoreboard.resources
