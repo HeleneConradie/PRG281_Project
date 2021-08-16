@@ -245,9 +245,10 @@
             this.lblTnC.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTnC.Location = new System.Drawing.Point(570, 333);
             this.lblTnC.Name = "lblTnC";
-            this.lblTnC.Size = new System.Drawing.Size(124, 14);
+            this.lblTnC.Size = new System.Drawing.Size(105, 14);
             this.lblTnC.TabIndex = 24;
-            this.lblTnC.Text = " Terms and Conditions";
+            this.lblTnC.Text = " Terms  Conditions";
+            this.lblTnC.Click += new System.EventHandler(this.lblTnC_Click);
             // 
             // pictureBox4
             // 

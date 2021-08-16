@@ -26,7 +26,7 @@ namespace SkyBeat
         {
             frmLogin login = new frmLogin();
             this.Hide();
-            login.ShowDialog();
+            login.Show();
             this.Close();
         }
 
@@ -34,6 +34,14 @@ namespace SkyBeat
         {
             string message = "Make use of Characters and Numbers";
             MessageBox.Show(message, "Hint");
+        }
+
+        private void lblTnC_Click(object sender, EventArgs e)
+        {
+            frmTnC terms = new frmTnC();
+            this.Hide();
+            terms.ShowDialog();
+            this.Show();
         }
     }
 }
