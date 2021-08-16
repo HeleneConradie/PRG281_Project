@@ -30,37 +30,37 @@ namespace SkyBeat
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            this.lblHeadingL1 = new System.Windows.Forms.Label();
+            this.lblLoginHeading1 = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblPass = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
-            this.lblPassword2 = new System.Windows.Forms.Label();
-            this.lblSignup = new System.Windows.Forms.Label();
+            this.lblForgotPass = new System.Windows.Forms.Label();
+            this.lblLoginSignup = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbPass2 = new System.Windows.Forms.PictureBox();
-            this.pbPass = new System.Windows.Forms.PictureBox();
-            this.pbUsername = new System.Windows.Forms.PictureBox();
+            this.pbEarphones = new System.Windows.Forms.PictureBox();
+            this.pbShowPassword = new System.Windows.Forms.PictureBox();
+            this.pbLockIcon = new System.Windows.Forms.PictureBox();
+            this.pbUserIcon = new System.Windows.Forms.PictureBox();
             this.pnlUsername = new System.Windows.Forms.Panel();
             this.pnlPassword = new System.Windows.Forms.Panel();
             this.lblRights2 = new System.Windows.Forms.Label();
             this.lblDesign2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPass2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPass)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEarphones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShowPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLockIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserIcon)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblHeadingL1
+            // lblLoginHeading1
             // 
-            this.lblHeadingL1.AutoSize = true;
-            this.lblHeadingL1.Font = new System.Drawing.Font("Harrington", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeadingL1.Location = new System.Drawing.Point(323, 9);
-            this.lblHeadingL1.Name = "lblHeadingL1";
-            this.lblHeadingL1.Size = new System.Drawing.Size(87, 32);
-            this.lblHeadingL1.TabIndex = 0;
-            this.lblHeadingL1.Text = "Login";
+            this.lblLoginHeading1.AutoSize = true;
+            this.lblLoginHeading1.Font = new System.Drawing.Font("Harrington", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginHeading1.Location = new System.Drawing.Point(323, 9);
+            this.lblLoginHeading1.Name = "lblLoginHeading1";
+            this.lblLoginHeading1.Size = new System.Drawing.Size(87, 32);
+            this.lblLoginHeading1.TabIndex = 0;
+            this.lblLoginHeading1.Text = "Login";
             // 
             // lblUsername
             // 
@@ -101,28 +101,28 @@ namespace SkyBeat
             this.txtPass.Size = new System.Drawing.Size(150, 13);
             this.txtPass.TabIndex = 5;
             // 
-            // lblPassword2
+            // lblForgotPass
             // 
-            this.lblPassword2.AutoSize = true;
-            this.lblPassword2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblPassword2.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword2.Location = new System.Drawing.Point(317, 195);
-            this.lblPassword2.Name = "lblPassword2";
-            this.lblPassword2.Size = new System.Drawing.Size(123, 13);
-            this.lblPassword2.TabIndex = 8;
-            this.lblPassword2.Text = "Forgot your password?";
+            this.lblForgotPass.AutoSize = true;
+            this.lblForgotPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblForgotPass.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgotPass.Location = new System.Drawing.Point(317, 195);
+            this.lblForgotPass.Name = "lblForgotPass";
+            this.lblForgotPass.Size = new System.Drawing.Size(123, 13);
+            this.lblForgotPass.TabIndex = 8;
+            this.lblForgotPass.Text = "Forgot your password?";
             // 
-            // lblSignup
+            // lblLoginSignup
             // 
-            this.lblSignup.AutoSize = true;
-            this.lblSignup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblSignup.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSignup.Location = new System.Drawing.Point(317, 224);
-            this.lblSignup.Name = "lblSignup";
-            this.lblSignup.Size = new System.Drawing.Size(120, 13);
-            this.lblSignup.TabIndex = 9;
-            this.lblSignup.Text = "Don\'t have an account?";
-            this.lblSignup.Click += new System.EventHandler(this.lblSignup_Click);
+            this.lblLoginSignup.AutoSize = true;
+            this.lblLoginSignup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLoginSignup.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginSignup.Location = new System.Drawing.Point(317, 224);
+            this.lblLoginSignup.Name = "lblLoginSignup";
+            this.lblLoginSignup.Size = new System.Drawing.Size(120, 13);
+            this.lblLoginSignup.TabIndex = 9;
+            this.lblLoginSignup.Text = "Don\'t have an account?";
+            this.lblLoginSignup.Click += new System.EventHandler(this.lblSignup_Click);
             // 
             // btnLogin
             // 
@@ -135,46 +135,46 @@ namespace SkyBeat
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // pbEarphones
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-41, 129);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(364, 241);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.pbEarphones.Image = ((System.Drawing.Image)(resources.GetObject("pbEarphones.Image")));
+            this.pbEarphones.Location = new System.Drawing.Point(-41, 129);
+            this.pbEarphones.Name = "pbEarphones";
+            this.pbEarphones.Size = new System.Drawing.Size(364, 241);
+            this.pbEarphones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbEarphones.TabIndex = 11;
+            this.pbEarphones.TabStop = false;
             // 
-            // pbPass2
+            // pbShowPassword
             // 
-            this.pbPass2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbPass2.Image = global::SkyBeat.Properties.Resources.ShowPass;
-            this.pbPass2.Location = new System.Drawing.Point(470, 157);
-            this.pbPass2.Name = "pbPass2";
-            this.pbPass2.Size = new System.Drawing.Size(22, 20);
-            this.pbPass2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPass2.TabIndex = 7;
-            this.pbPass2.TabStop = false;
+            this.pbShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbShowPassword.Image = global::SkyBeat.Properties.Resources.ShowPass;
+            this.pbShowPassword.Location = new System.Drawing.Point(470, 157);
+            this.pbShowPassword.Name = "pbShowPassword";
+            this.pbShowPassword.Size = new System.Drawing.Size(22, 20);
+            this.pbShowPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbShowPassword.TabIndex = 7;
+            this.pbShowPassword.TabStop = false;
             // 
-            // pbPass
+            // pbLockIcon
             // 
-            this.pbPass.Image = global::SkyBeat.Properties.Resources.Lock_Logo;
-            this.pbPass.Location = new System.Drawing.Point(292, 157);
-            this.pbPass.Name = "pbPass";
-            this.pbPass.Size = new System.Drawing.Size(22, 20);
-            this.pbPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPass.TabIndex = 6;
-            this.pbPass.TabStop = false;
+            this.pbLockIcon.Image = global::SkyBeat.Properties.Resources.Lock_Logo;
+            this.pbLockIcon.Location = new System.Drawing.Point(292, 157);
+            this.pbLockIcon.Name = "pbLockIcon";
+            this.pbLockIcon.Size = new System.Drawing.Size(22, 20);
+            this.pbLockIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLockIcon.TabIndex = 6;
+            this.pbLockIcon.TabStop = false;
             // 
-            // pbUsername
+            // pbUserIcon
             // 
-            this.pbUsername.Image = global::SkyBeat.Properties.Resources.Username_Logo;
-            this.pbUsername.Location = new System.Drawing.Point(292, 103);
-            this.pbUsername.Name = "pbUsername";
-            this.pbUsername.Size = new System.Drawing.Size(22, 20);
-            this.pbUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbUsername.TabIndex = 2;
-            this.pbUsername.TabStop = false;
+            this.pbUserIcon.Image = global::SkyBeat.Properties.Resources.Username_Logo;
+            this.pbUserIcon.Location = new System.Drawing.Point(292, 103);
+            this.pbUserIcon.Name = "pbUserIcon";
+            this.pbUserIcon.Size = new System.Drawing.Size(22, 20);
+            this.pbUserIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbUserIcon.TabIndex = 2;
+            this.pbUserIcon.TabStop = false;
             // 
             // pnlUsername
             // 
@@ -198,15 +198,15 @@ namespace SkyBeat
             this.lblRights2.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRights2.Location = new System.Drawing.Point(183, 340);
             this.lblRights2.Name = "lblRights2";
-            this.lblRights2.Size = new System.Drawing.Size(186, 13);
+            this.lblRights2.Size = new System.Drawing.Size(188, 13);
             this.lblRights2.TabIndex = 14;
-            this.lblRights2.Text = "@ 2021 SkyBeat. All rights reserved";
+            this.lblRights2.Text = "@ 2021 SkyBeat. All rights reserved.";
             // 
             // lblDesign2
             // 
             this.lblDesign2.AutoSize = true;
             this.lblDesign2.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesign2.Location = new System.Drawing.Point(365, 340);
+            this.lblDesign2.Location = new System.Drawing.Point(367, 340);
             this.lblDesign2.Name = "lblDesign2";
             this.lblDesign2.Size = new System.Drawing.Size(306, 13);
             this.lblDesign2.TabIndex = 15;
@@ -224,16 +224,16 @@ namespace SkyBeat
             this.Controls.Add(this.pnlUsername);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.lblSignup);
-            this.Controls.Add(this.lblPassword2);
-            this.Controls.Add(this.pbPass2);
-            this.Controls.Add(this.pbPass);
+            this.Controls.Add(this.lblLoginSignup);
+            this.Controls.Add(this.lblForgotPass);
+            this.Controls.Add(this.pbShowPassword);
+            this.Controls.Add(this.pbLockIcon);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.pbUsername);
+            this.Controls.Add(this.pbUserIcon);
             this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.lblHeadingL1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblLoginHeading1);
+            this.Controls.Add(this.pbEarphones);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(750, 400);
             this.MinimumSize = new System.Drawing.Size(750, 400);
@@ -241,10 +241,10 @@ namespace SkyBeat
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPass2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEarphones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShowPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLockIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,18 +252,18 @@ namespace SkyBeat
 
         #endregion
 
-        private System.Windows.Forms.Label lblHeadingL1;
+        private System.Windows.Forms.Label lblLoginHeading1;
         private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.PictureBox pbUsername;
+        private System.Windows.Forms.PictureBox pbUserIcon;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.PictureBox pbPass;
-        private System.Windows.Forms.PictureBox pbPass2;
-        private System.Windows.Forms.Label lblPassword2;
-        private System.Windows.Forms.Label lblSignup;
+        private System.Windows.Forms.PictureBox pbLockIcon;
+        private System.Windows.Forms.PictureBox pbShowPassword;
+        private System.Windows.Forms.Label lblForgotPass;
+        private System.Windows.Forms.Label lblLoginSignup;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbEarphones;
         private System.Windows.Forms.Panel pnlUsername;
         private System.Windows.Forms.Panel pnlPassword;
         private System.Windows.Forms.Label lblRights2;

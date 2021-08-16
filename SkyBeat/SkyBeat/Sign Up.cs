@@ -43,5 +43,10 @@ namespace SkyBeat
             terms.ShowDialog();
             this.Show();
         }
+
+        private void btnCreateAccount_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

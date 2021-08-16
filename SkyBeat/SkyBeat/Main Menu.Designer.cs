@@ -29,29 +29,29 @@ namespace SkyBeat
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblMain = new System.Windows.Forms.Label();
+            this.lblMainHeading2 = new System.Windows.Forms.Label();
             this.btnSingle = new System.Windows.Forms.Button();
             this.btnMulti = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblHeadingM2 = new System.Windows.Forms.Label();
-            this.lblHeading3 = new System.Windows.Forms.Label();
+            this.pbGuitar = new System.Windows.Forms.PictureBox();
+            this.lblMainHeading3 = new System.Windows.Forms.Label();
+            this.lblMainHeading1 = new System.Windows.Forms.Label();
             this.lblRights = new System.Windows.Forms.Label();
             this.lblDesignby = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGuitar)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblMain
+            // lblMainHeading2
             // 
-            this.lblMain.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblMain.AutoSize = true;
-            this.lblMain.BackColor = System.Drawing.Color.Black;
-            this.lblMain.Font = new System.Drawing.Font("Harrington", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMain.ForeColor = System.Drawing.Color.White;
-            this.lblMain.Location = new System.Drawing.Point(220, 48);
-            this.lblMain.Name = "lblMain";
-            this.lblMain.Size = new System.Drawing.Size(220, 47);
-            this.lblMain.TabIndex = 2;
-            this.lblMain.Text = "Main Menu";
+            this.lblMainHeading2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblMainHeading2.AutoSize = true;
+            this.lblMainHeading2.BackColor = System.Drawing.Color.Black;
+            this.lblMainHeading2.Font = new System.Drawing.Font("Harrington", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMainHeading2.ForeColor = System.Drawing.Color.White;
+            this.lblMainHeading2.Location = new System.Drawing.Point(220, 48);
+            this.lblMainHeading2.Name = "lblMainHeading2";
+            this.lblMainHeading2.Size = new System.Drawing.Size(220, 47);
+            this.lblMainHeading2.TabIndex = 2;
+            this.lblMainHeading2.Text = "Main Menu";
             // 
             // btnSingle
             // 
@@ -75,40 +75,40 @@ namespace SkyBeat
             this.btnMulti.Text = "Multiplayer";
             this.btnMulti.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // pbGuitar
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pbGuitar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::SkyBeat.Properties.Resources.Guitar;
-            this.pictureBox1.Location = new System.Drawing.Point(228, 133);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(444, 268);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.pbGuitar.Image = global::SkyBeat.Properties.Resources.Guitar;
+            this.pbGuitar.Location = new System.Drawing.Point(228, 133);
+            this.pbGuitar.Name = "pbGuitar";
+            this.pbGuitar.Size = new System.Drawing.Size(444, 268);
+            this.pbGuitar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbGuitar.TabIndex = 6;
+            this.pbGuitar.TabStop = false;
             // 
-            // lblHeadingM2
+            // lblMainHeading3
             // 
-            this.lblHeadingM2.AutoSize = true;
-            this.lblHeadingM2.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeadingM2.ForeColor = System.Drawing.Color.White;
-            this.lblHeadingM2.Location = new System.Drawing.Point(247, 107);
-            this.lblHeadingM2.Name = "lblHeadingM2";
-            this.lblHeadingM2.Size = new System.Drawing.Size(171, 23);
-            this.lblHeadingM2.TabIndex = 7;
-            this.lblHeadingM2.Text = "Choose your mode:";
+            this.lblMainHeading3.AutoSize = true;
+            this.lblMainHeading3.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMainHeading3.ForeColor = System.Drawing.Color.White;
+            this.lblMainHeading3.Location = new System.Drawing.Point(247, 107);
+            this.lblMainHeading3.Name = "lblMainHeading3";
+            this.lblMainHeading3.Size = new System.Drawing.Size(171, 23);
+            this.lblMainHeading3.TabIndex = 7;
+            this.lblMainHeading3.Text = "Choose your mode:";
             // 
-            // lblHeading3
+            // lblMainHeading1
             // 
-            this.lblHeading3.AutoSize = true;
-            this.lblHeading3.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeading3.ForeColor = System.Drawing.Color.White;
-            this.lblHeading3.Location = new System.Drawing.Point(288, 9);
-            this.lblHeading3.Name = "lblHeading3";
-            this.lblHeading3.Size = new System.Drawing.Size(84, 24);
-            this.lblHeading3.TabIndex = 8;
-            this.lblHeading3.Text = "SkyBeat";
+            this.lblMainHeading1.AutoSize = true;
+            this.lblMainHeading1.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMainHeading1.ForeColor = System.Drawing.Color.White;
+            this.lblMainHeading1.Location = new System.Drawing.Point(288, 9);
+            this.lblMainHeading1.Name = "lblMainHeading1";
+            this.lblMainHeading1.Size = new System.Drawing.Size(84, 24);
+            this.lblMainHeading1.TabIndex = 8;
+            this.lblMainHeading1.Text = "SkyBeat";
             // 
             // lblRights
             // 
@@ -117,16 +117,16 @@ namespace SkyBeat
             this.lblRights.ForeColor = System.Drawing.Color.White;
             this.lblRights.Location = new System.Drawing.Point(12, 378);
             this.lblRights.Name = "lblRights";
-            this.lblRights.Size = new System.Drawing.Size(193, 14);
+            this.lblRights.Size = new System.Drawing.Size(196, 14);
             this.lblRights.TabIndex = 9;
-            this.lblRights.Text = "@ 2021 SkyBeat. All rights reserved";
+            this.lblRights.Text = "@ 2021 SkyBeat. All rights reserved.";
             // 
             // lblDesignby
             // 
             this.lblDesignby.AutoSize = true;
             this.lblDesignby.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesignby.ForeColor = System.Drawing.Color.White;
-            this.lblDesignby.Location = new System.Drawing.Point(202, 378);
+            this.lblDesignby.Location = new System.Drawing.Point(204, 378);
             this.lblDesignby.Name = "lblDesignby";
             this.lblDesignby.Size = new System.Drawing.Size(328, 14);
             this.lblDesignby.TabIndex = 10;
@@ -140,12 +140,12 @@ namespace SkyBeat
             this.ClientSize = new System.Drawing.Size(664, 401);
             this.Controls.Add(this.lblDesignby);
             this.Controls.Add(this.lblRights);
-            this.Controls.Add(this.lblHeading3);
-            this.Controls.Add(this.lblHeadingM2);
+            this.Controls.Add(this.lblMainHeading1);
+            this.Controls.Add(this.lblMainHeading3);
             this.Controls.Add(this.btnMulti);
             this.Controls.Add(this.btnSingle);
-            this.Controls.Add(this.lblMain);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblMainHeading2);
+            this.Controls.Add(this.pbGuitar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(680, 440);
@@ -154,19 +154,19 @@ namespace SkyBeat
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGuitar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lblMain;
+        private System.Windows.Forms.Label lblMainHeading2;
         private System.Windows.Forms.Button btnSingle;
         private System.Windows.Forms.Button btnMulti;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblHeadingM2;
-        private System.Windows.Forms.Label lblHeading3;
+        private System.Windows.Forms.PictureBox pbGuitar;
+        private System.Windows.Forms.Label lblMainHeading3;
+        private System.Windows.Forms.Label lblMainHeading1;
         private System.Windows.Forms.Label lblRights;
         private System.Windows.Forms.Label lblDesignby;
     }
