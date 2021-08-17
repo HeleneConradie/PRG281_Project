@@ -19,7 +19,27 @@ namespace SkyBeat
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+           DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Close SkyBeat", 
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnPlayAgain_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmStart playagain = new frmStart();
+            playagain.Show();
+            
+        }
+
+        private void btnMainMenu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMain mainmenu = new frmMain();
+            mainmenu.Show();
         }
     }
 }

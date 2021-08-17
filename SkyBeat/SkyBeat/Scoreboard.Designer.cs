@@ -47,6 +47,7 @@ namespace SkyBeat
             this.lblWinner = new System.Windows.Forms.Label();
             this.btnPlayAgain = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnMainMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -208,18 +209,19 @@ namespace SkyBeat
             // 
             this.btnPlayAgain.BackColor = System.Drawing.Color.White;
             this.btnPlayAgain.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlayAgain.Location = new System.Drawing.Point(12, 353);
+            this.btnPlayAgain.Location = new System.Drawing.Point(102, 333);
             this.btnPlayAgain.Name = "btnPlayAgain";
             this.btnPlayAgain.Size = new System.Drawing.Size(150, 30);
             this.btnPlayAgain.TabIndex = 16;
             this.btnPlayAgain.Text = "Play Again";
             this.btnPlayAgain.UseVisualStyleBackColor = false;
+            this.btnPlayAgain.Click += new System.EventHandler(this.btnPlayAgain_Click);
             // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.White;
             this.btnExit.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(187, 353);
+            this.btnExit.Location = new System.Drawing.Point(187, 369);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(150, 30);
             this.btnExit.TabIndex = 17;
@@ -227,12 +229,25 @@ namespace SkyBeat
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnMainMenu
+            // 
+            this.btnMainMenu.BackColor = System.Drawing.Color.White;
+            this.btnMainMenu.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMainMenu.Location = new System.Drawing.Point(12, 369);
+            this.btnMainMenu.Name = "btnMainMenu";
+            this.btnMainMenu.Size = new System.Drawing.Size(150, 30);
+            this.btnMainMenu.TabIndex = 18;
+            this.btnMainMenu.Text = "Main Menu";
+            this.btnMainMenu.UseVisualStyleBackColor = false;
+            this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
+            // 
             // frmScoreboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(684, 411);
+            this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnPlayAgain);
             this.Controls.Add(this.lblWinner);
@@ -282,5 +297,6 @@ namespace SkyBeat
         private System.Windows.Forms.Label lblWinner;
         private System.Windows.Forms.Button btnPlayAgain;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnMainMenu;
     }
 }

@@ -16,5 +16,12 @@ namespace SkyBeat
         {
             InitializeComponent();
         }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMainGameForm game = new frmMainGameForm();
+            game.Show();
+        }
     }
 }

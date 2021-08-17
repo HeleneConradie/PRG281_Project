@@ -19,11 +19,9 @@ namespace SkyBeat
 
         private void lblSignup_Click(object sender, EventArgs e)
         {
-            frmSignup signup = new frmSignup();
             this.Hide();
+            frmSignup signup = new frmSignup();
             signup.Show();
-            this.Close();
-
         }
 
         private void pbShowPassword_MouseDown(object sender, MouseEventArgs e)
@@ -41,5 +39,9 @@ namespace SkyBeat
             txtPass.PasswordChar = '*';
         }
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -54,6 +54,7 @@ namespace SkyBeat
             this.btnStart.TabIndex = 1;
             this.btnStart.Text = "START";
             this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // lblStartHeading
             // 
