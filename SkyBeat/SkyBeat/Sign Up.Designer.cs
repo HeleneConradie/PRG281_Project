@@ -93,9 +93,9 @@
             this.txtPass2.BackColor = System.Drawing.Color.White;
             this.txtPass2.Location = new System.Drawing.Point(544, 168);
             this.txtPass2.Name = "txtPass2";
-            this.txtPass2.PasswordChar = '*';
             this.txtPass2.Size = new System.Drawing.Size(150, 20);
             this.txtPass2.TabIndex = 3;
+            this.txtPass2.TextChanged += new System.EventHandler(this.txtPass2_TextChanged);
             // 
             // lblName
             // 
@@ -275,6 +275,8 @@
             this.pbShowPass2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbShowPass2.TabIndex = 21;
             this.pbShowPass2.TabStop = false;
+            this.pbShowPass2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbShowPass2_MouseDown);
+            this.pbShowPass2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbShowPass2_MouseUp);
             // 
             // pbLockIcon2
             // 

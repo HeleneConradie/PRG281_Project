@@ -143,6 +143,7 @@ namespace SkyBeat
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(584, 411);
+            this.Controls.Add(this.pbArtist);
             this.Controls.Add(this.cb5);
             this.Controls.Add(this.cb4);
             this.Controls.Add(this.cb3);
@@ -151,7 +152,6 @@ namespace SkyBeat
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblMainGameHeading1);
             this.Controls.Add(this.cb1);
-            this.Controls.Add(this.pbArtist);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(600, 450);
             this.MinimumSize = new System.Drawing.Size(600, 450);

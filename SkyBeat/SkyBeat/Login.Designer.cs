@@ -98,9 +98,9 @@ namespace SkyBeat
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPass.Location = new System.Drawing.Point(320, 161);
             this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(150, 13);
             this.txtPass.TabIndex = 5;
+            this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             // 
             // lblForgotPass
             // 
@@ -156,6 +156,8 @@ namespace SkyBeat
             this.pbShowPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbShowPassword.TabIndex = 7;
             this.pbShowPassword.TabStop = false;
+            this.pbShowPassword.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbShowPassword_MouseDown);
+            this.pbShowPassword.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbShowPassword_MouseUp);
             // 
             // pbLockIcon
             // 

@@ -48,5 +48,20 @@ namespace SkyBeat
         {
 
         }
+
+        private void pbShowPass2_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtPass2.PasswordChar = '\0';
+        }
+
+        private void pbShowPass2_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtPass2.PasswordChar = '*';
+        }
+
+        private void txtPass2_TextChanged(object sender, EventArgs e)
+        {
+            txtPass2.PasswordChar = '*';
+        }
     }
 }

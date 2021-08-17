@@ -25,5 +25,21 @@ namespace SkyBeat
             this.Close();
 
         }
+
+        private void pbShowPassword_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtPass.PasswordChar = '\0';
+        }
+
+        private void pbShowPassword_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtPass.PasswordChar = '*';
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+            txtPass.PasswordChar = '*';
+        }
+
     }
 }
