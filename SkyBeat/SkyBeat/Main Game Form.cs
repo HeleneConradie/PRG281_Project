@@ -17,6 +17,15 @@ namespace SkyBeat
             InitializeComponent();
         }
 
-       
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult exit =  MessageBox.Show("Are you sure you want to exit mid-game?", "Exit?"
+                , MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (exit == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+        }
     }
 }

@@ -17,17 +17,12 @@ namespace SkyBeat
             InitializeComponent();
         }
 
-        private void lblID_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin();
             this.Hide();
+            frmLogin login = new frmLogin();
             login.Show();
-            this.Close();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -62,6 +57,11 @@ namespace SkyBeat
         private void txtPass2_TextChanged(object sender, EventArgs e)
         {
             txtPass2.PasswordChar = '*';
+        }
+
+        private void frmSignup_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

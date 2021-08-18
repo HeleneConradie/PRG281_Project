@@ -32,6 +32,7 @@ namespace SkyBeat
             this.lblReady = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.lblStartHeading = new System.Windows.Forms.Label();
+            this.btnMainMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblReady
@@ -66,12 +67,26 @@ namespace SkyBeat
             this.lblStartHeading.TabIndex = 2;
             this.lblStartHeading.Text = "SkyBeat";
             // 
+            // btnMainMenu
+            // 
+            this.btnMainMenu.BackColor = System.Drawing.Color.White;
+            this.btnMainMenu.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMainMenu.Location = new System.Drawing.Point(91, 183);
+            this.btnMainMenu.Name = "btnMainMenu";
+            this.btnMainMenu.Size = new System.Drawing.Size(150, 30);
+            this.btnMainMenu.TabIndex = 3;
+            this.btnMainMenu.Text = "Main Menu";
+            this.btnMainMenu.UseVisualStyleBackColor = false;
+            this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
+            // 
             // frmStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(334, 261);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.lblStartHeading);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblReady);
@@ -93,5 +108,6 @@ namespace SkyBeat
         private System.Windows.Forms.Label lblReady;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblStartHeading;
+        private System.Windows.Forms.Button btnMainMenu;
     }
 }

@@ -38,6 +38,7 @@ namespace SkyBeat
             this.cb5 = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbArtist = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArtist)).BeginInit();
             this.SuspendLayout();
@@ -110,7 +111,7 @@ namespace SkyBeat
             // 
             this.cb5.AutoSize = true;
             this.cb5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb5.Location = new System.Drawing.Point(378, 259);
+            this.cb5.Location = new System.Drawing.Point(378, 257);
             this.cb5.Name = "cb5";
             this.cb5.Size = new System.Drawing.Size(85, 23);
             this.cb5.TabIndex = 8;
@@ -137,12 +138,26 @@ namespace SkyBeat
             this.pbArtist.TabIndex = 0;
             this.pbArtist.TabStop = false;
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.White;
+            this.btnExit.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(472, 369);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(100, 30);
+            this.btnExit.TabIndex = 9;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // frmMainGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(584, 411);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pbArtist);
             this.Controls.Add(this.cb5);
             this.Controls.Add(this.cb4);
@@ -177,5 +192,6 @@ namespace SkyBeat
         private System.Windows.Forms.CheckBox cb3;
         private System.Windows.Forms.CheckBox cb4;
         private System.Windows.Forms.CheckBox cb5;
+        private System.Windows.Forms.Button btnExit;
     }
 }

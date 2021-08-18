@@ -247,6 +247,7 @@ namespace SkyBeat
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(684, 411);
+            this.ControlBox = false;
             this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnPlayAgain);

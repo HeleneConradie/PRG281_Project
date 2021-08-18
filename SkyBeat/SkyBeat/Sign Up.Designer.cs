@@ -142,7 +142,6 @@
             this.lblID.Size = new System.Drawing.Size(81, 16);
             this.lblID.TabIndex = 8;
             this.lblID.Text = "ID Number";
-            this.lblID.Click += new System.EventHandler(this.lblID_Click);
             // 
             // txtID
             // 
@@ -354,6 +353,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign Up";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSignup_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pbHelp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowPass2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLockIcon2)).EndInit();

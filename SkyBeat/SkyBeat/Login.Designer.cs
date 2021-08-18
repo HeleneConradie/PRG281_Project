@@ -47,6 +47,7 @@ namespace SkyBeat
             this.lblRights2 = new System.Windows.Forms.Label();
             this.lblDesign2 = new System.Windows.Forms.Label();
             this.lblLoginHeading2 = new System.Windows.Forms.Label();
+            this.lblPlayer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbEarphones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLockIcon)).BeginInit();
@@ -226,12 +227,23 @@ namespace SkyBeat
             this.lblLoginHeading2.TabIndex = 16;
             this.lblLoginHeading2.Text = "SkyBeat";
             // 
+            // lblPlayer
+            // 
+            this.lblPlayer.AutoSize = true;
+            this.lblPlayer.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayer.Location = new System.Drawing.Point(353, 59);
+            this.lblPlayer.Name = "lblPlayer";
+            this.lblPlayer.Size = new System.Drawing.Size(46, 16);
+            this.lblPlayer.TabIndex = 17;
+            this.lblPlayer.Text = "Player";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(734, 361);
+            this.Controls.Add(this.lblPlayer);
             this.Controls.Add(this.lblLoginHeading2);
             this.Controls.Add(this.lblDesign2);
             this.Controls.Add(this.lblRights2);
@@ -256,6 +268,7 @@ namespace SkyBeat
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pbEarphones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLockIcon)).EndInit();
@@ -284,5 +297,6 @@ namespace SkyBeat
         private System.Windows.Forms.Label lblRights2;
         private System.Windows.Forms.Label lblDesign2;
         private System.Windows.Forms.Label lblLoginHeading2;
+        private System.Windows.Forms.Label lblPlayer;
     }
 }

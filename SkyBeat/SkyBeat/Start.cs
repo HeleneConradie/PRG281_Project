@@ -23,5 +23,17 @@ namespace SkyBeat
             frmMainGameForm game = new frmMainGameForm();
             game.Show();
         }
+
+        private void btnMainMenu_Click(object sender, EventArgs e)
+        {
+            DialogResult mainmenu = MessageBox.Show("Are you sure you want to return to the Main Menu?", "Are you sure?"
+                , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (mainmenu == DialogResult.Yes)
+            {
+                this.Hide();
+                frmMain MainMenu = new frmMain();
+                MainMenu.Show();
+            }
+        }
     }
 }

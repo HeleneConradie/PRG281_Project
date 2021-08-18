@@ -63,6 +63,7 @@ namespace SkyBeat
             this.btnSingle.TabIndex = 4;
             this.btnSingle.Text = "Single Player";
             this.btnSingle.UseVisualStyleBackColor = true;
+            this.btnSingle.Click += new System.EventHandler(this.btnSingle_Click);
             // 
             // btnMulti
             // 
@@ -74,6 +75,7 @@ namespace SkyBeat
             this.btnMulti.TabIndex = 5;
             this.btnMulti.Text = "Multiplayer";
             this.btnMulti.UseVisualStyleBackColor = true;
+            this.btnMulti.Click += new System.EventHandler(this.btnMulti_Click);
             // 
             // pbGuitar
             // 
@@ -154,6 +156,7 @@ namespace SkyBeat
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Choose Mode";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pbGuitar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
