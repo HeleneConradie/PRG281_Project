@@ -27,7 +27,7 @@ namespace SkyBeat
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            string message = "Make use of Characters and Numbers";
+            string message = "Make use of Characters and Numbers.\nYour password should contain at least 8 characters.";
             MessageBox.Show(message, "Hint");
         }
 
