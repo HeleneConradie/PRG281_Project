@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,9 +14,13 @@ namespace SkyBeat
     public partial class frmLogin : Form
     {
         int ModeNumber;
+        SqlConnection connection;
+        SqlCommand cmd;
+        SqlDataReader dr;
         public frmLogin()
         {
             InitializeComponent();
+            connection = new SqlConnection("Server=DESKTOP-MK3GTIU\\SQLEXPRESS; Initial Catalog = dbdSkyBeat; Integrated security = SSPI");
         }
 
         //Method is used in frmMain (Choose Option Form)
@@ -59,13 +64,38 @@ namespace SkyBeat
         //The user is logged in and the next form appears
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            cmd = new SqlCommand();
+            connection.Open();
+            cmd.Connection = connection;
+            cmd.CommandText = "SELECT * FROM UserLogin WHERE Username ='" + txtUsername.Text + "' AND UserPassword = '" + txtPass.Text + "'";
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                MessageBox.Show("Welcome! " + txtUsername.Text, "Login Successful", MessageBoxButtons.OK);
+                this.Hide();
+                frmStart strt = new frmStart();
+                strt.Show();
+            }
+            else
+            {
+                DialogResult res = MessageBox.Show("Invalid Username or Password!", "Invalid Login Details", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning);
+                txtUsername.Clear();
+                txtPass.Clear();
+                txtUsername.Focus();
+            }
+            connection.Close();
         }
 
         //Closes the application
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void lblForgotPass_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

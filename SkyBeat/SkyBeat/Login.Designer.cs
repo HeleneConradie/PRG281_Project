@@ -113,6 +113,7 @@ namespace SkyBeat
             this.lblForgotPass.Size = new System.Drawing.Size(123, 13);
             this.lblForgotPass.TabIndex = 8;
             this.lblForgotPass.Text = "Forgot your password?";
+            this.lblForgotPass.Click += new System.EventHandler(this.lblForgotPass_Click);
             // 
             // lblLoginSignup
             // 

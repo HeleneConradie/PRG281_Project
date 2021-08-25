@@ -11,7 +11,7 @@ namespace SkyBeat
     class dbHandler
     {
         private bool flag = false;
-        private readonly string databaseconnection = @"Data source = .; Initial Catalog = dbdSkyBeat; Integrated security = SSPI";
+        private readonly string databaseconnection = (@"Data source = .; Initial Catalog = dbdSkyBeat; Integrated security = SSPI");
 
         public string databaseconnect { get => databaseconnection; }
 
