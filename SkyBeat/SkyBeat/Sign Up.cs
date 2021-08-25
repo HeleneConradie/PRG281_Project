@@ -41,7 +41,13 @@ namespace SkyBeat
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-
+            DialogResult termsnconditions = MessageBox.Show("Have you read the terms and conditions?" +
+                "\nDo you agre to the terms and conditions?", "Terms and Conditions", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (termsnconditions == DialogResult.Yes)
+            {
+                //Opens next form after calling and applying validation method
+            }
+            
         }
 
         private void pbShowPass2_MouseDown(object sender, MouseEventArgs e)

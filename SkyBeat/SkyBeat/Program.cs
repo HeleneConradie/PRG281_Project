@@ -16,7 +16,7 @@ namespace SkyBeat
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMainGameForm());
+            Application.Run(new frmStart());
         }
     }
 }

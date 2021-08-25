@@ -18,8 +18,6 @@ namespace SkyBeat
             InitializeComponent();
         }
 
-       
-  
         //Closes the application
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
