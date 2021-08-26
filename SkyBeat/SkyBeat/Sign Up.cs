@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SkyBeat
 {
     public partial class frmSignup : Form
     {
+        SqlConnection connection;
+        SqlCommand cmd;
+
         public frmSignup()
         {
             InitializeComponent();
+            connection = new SqlConnection("Server=DESKTOP-MK3GTIU\\SQLEXPRESS; Initial Catalog = dbdSkyBeat; Integrated security = SSPI");
         }
 
 
@@ -47,14 +52,46 @@ namespace SkyBeat
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-            DialogResult termsnconditions = MessageBox.Show("Have you read the terms and conditions?\n" +
-                "By saying yes, you are agreeing with the terms and conditions.","Terms and Conditions", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if (termsnconditions == DialogResult.Yes)
+            try
             {
-                //Opens next form after calling and applying validation method
+                bool success = true;
+                if (success == true)
+                {
+                    DialogResult termsnconditions = MessageBox.Show("Have you read the terms and conditions?\n" +
+                    "By saying yes, you are agreeing with the terms and conditions.", "Terms and Conditions", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+                    if (termsnconditions == DialogResult.Yes)
+                    {
+                        cmd = new SqlCommand();
+                        connection.Open();
+                        cmd.Connection = connection;
+                        cmd.CommandText = "INSERT INTO UserDetails(FirstName, LastName, IDNumber, Gender, Email, SecurityQuestion, SecurityAnswer)" +
+                            "VALUES ('" + txtName.Text + "','" + txtSurname.Text + "', '" + txtID.Text + "', '" + cmbGender.Text + "', '" + txtEmail.Text + "', '" + rtxtSecQuestion.Text + "', '" + txtSecAnswer + "')";
+
+                        cmd.ExecuteNonQuery();
+
+                        cmd.CommandText = "INSERT INTO UserLogin(Username, UserPassword)" +
+                            "VALUES ('" + txtUsername2.Text + "','" + txtPass2.Text + "')";
+
+                        cmd.ExecuteNonQuery();
+
+                        connection.Close();
+
+                        this.Hide();
+                        frmLogin login = new frmLogin();
+                        login.Show();
+                    }
+                    throw new Exception("Failed to create an account!\nYou need to agree to the terms and conditions.");
+                } 
             }
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+          
+        //Validation method 
+        //Validation method should return true or false (bool)
 
         private void pbShowPass2_MouseDown(object sender, MouseEventArgs e)
         {
@@ -76,5 +113,17 @@ namespace SkyBeat
             Application.Exit();
         }
 
+        private void lblClear_Click(object sender, EventArgs e)
+        {
+            txtName.Clear();
+            txtSurname.Clear();
+            txtID.Clear();
+            cmbGender.Text = "";
+            txtEmail.Clear();
+            rtxtSecQuestion.Clear();
+            txtSecAnswer.Clear();
+            txtUsername2.Clear();
+            txtPass2.Clear();
+        }
     }
 }

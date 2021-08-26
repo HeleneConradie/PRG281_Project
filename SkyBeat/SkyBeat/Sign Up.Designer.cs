@@ -58,6 +58,7 @@
             this.lblSecAnswer = new System.Windows.Forms.Label();
             this.pbHelp2 = new System.Windows.Forms.PictureBox();
             this.lblRights = new System.Windows.Forms.Label();
+            this.lblClear = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbHelp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowPass2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLockIcon2)).BeginInit();
@@ -215,7 +216,7 @@
             this.btnCreateAccount.BackColor = System.Drawing.Color.White;
             this.btnCreateAccount.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCreateAccount.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateAccount.Location = new System.Drawing.Point(566, 364);
+            this.btnCreateAccount.Location = new System.Drawing.Point(572, 364);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(150, 30);
             this.btnCreateAccount.TabIndex = 18;
@@ -251,7 +252,7 @@
             this.lblSignupTnC.AutoSize = true;
             this.lblSignupTnC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSignupTnC.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSignupTnC.Location = new System.Drawing.Point(593, 347);
+            this.lblSignupTnC.Location = new System.Drawing.Point(592, 347);
             this.lblSignupTnC.Name = "lblSignupTnC";
             this.lblSignupTnC.Size = new System.Drawing.Size(105, 14);
             this.lblSignupTnC.TabIndex = 24;
@@ -355,12 +356,24 @@
             // 
             this.lblRights.AutoSize = true;
             this.lblRights.Font = new System.Drawing.Font("Bahnschrift", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRights.Location = new System.Drawing.Point(147, 404);
+            this.lblRights.Location = new System.Drawing.Point(143, 404);
             this.lblRights.Name = "lblRights";
             this.lblRights.Size = new System.Drawing.Size(441, 12);
             this.lblRights.TabIndex = 33;
             this.lblRights.Text = "@ 2021 SkyBeat. All rights reserved. | Design by Helene Conradie, Henco De Lange," +
     " Hermann Smit";
+            // 
+            // lblClear
+            // 
+            this.lblClear.AutoSize = true;
+            this.lblClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblClear.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClear.Location = new System.Drawing.Point(15, 349);
+            this.lblClear.Name = "lblClear";
+            this.lblClear.Size = new System.Drawing.Size(68, 14);
+            this.lblClear.TabIndex = 34;
+            this.lblClear.Text = "Clear Fields";
+            this.lblClear.Click += new System.EventHandler(this.lblClear_Click);
             // 
             // frmSignup
             // 
@@ -368,6 +381,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(734, 421);
+            this.Controls.Add(this.lblClear);
             this.Controls.Add(this.lblRights);
             this.Controls.Add(this.pbHelp2);
             this.Controls.Add(this.lblSecAnswer);
@@ -444,5 +458,6 @@
         private System.Windows.Forms.Label lblSecAnswer;
         private System.Windows.Forms.PictureBox pbHelp2;
         private System.Windows.Forms.Label lblRights;
+        private System.Windows.Forms.Label lblClear;
     }
 }
