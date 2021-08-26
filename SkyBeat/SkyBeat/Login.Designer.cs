@@ -45,7 +45,6 @@ namespace SkyBeat
             this.pnlUsername = new System.Windows.Forms.Panel();
             this.pnlPassword = new System.Windows.Forms.Panel();
             this.lblRights2 = new System.Windows.Forms.Label();
-            this.lblDesign2 = new System.Windows.Forms.Label();
             this.lblLoginHeading2 = new System.Windows.Forms.Label();
             this.lblPlayer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbEarphones)).BeginInit();
@@ -201,22 +200,13 @@ namespace SkyBeat
             // lblRights2
             // 
             this.lblRights2.AutoSize = true;
-            this.lblRights2.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRights2.Location = new System.Drawing.Point(183, 340);
+            this.lblRights2.Font = new System.Drawing.Font("Bahnschrift", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRights2.Location = new System.Drawing.Point(189, 344);
             this.lblRights2.Name = "lblRights2";
-            this.lblRights2.Size = new System.Drawing.Size(188, 13);
+            this.lblRights2.Size = new System.Drawing.Size(441, 12);
             this.lblRights2.TabIndex = 14;
-            this.lblRights2.Text = "@ 2021 SkyBeat. All rights reserved.";
-            // 
-            // lblDesign2
-            // 
-            this.lblDesign2.AutoSize = true;
-            this.lblDesign2.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesign2.Location = new System.Drawing.Point(367, 340);
-            this.lblDesign2.Name = "lblDesign2";
-            this.lblDesign2.Size = new System.Drawing.Size(306, 13);
-            this.lblDesign2.TabIndex = 15;
-            this.lblDesign2.Text = "| Design by Helene Conradie, Henco De Lange, Hermann Smit";
+            this.lblRights2.Text = "@ 2021 SkyBeat. All rights reserved. | Design by Helene Conradie, Henco De Lange," +
+    " Hermann Smit";
             // 
             // lblLoginHeading2
             // 
@@ -246,7 +236,6 @@ namespace SkyBeat
             this.ClientSize = new System.Drawing.Size(734, 361);
             this.Controls.Add(this.lblPlayer);
             this.Controls.Add(this.lblLoginHeading2);
-            this.Controls.Add(this.lblDesign2);
             this.Controls.Add(this.lblRights2);
             this.Controls.Add(this.pnlPassword);
             this.Controls.Add(this.pnlUsername);
@@ -296,7 +285,6 @@ namespace SkyBeat
         private System.Windows.Forms.Panel pnlUsername;
         private System.Windows.Forms.Panel pnlPassword;
         private System.Windows.Forms.Label lblRights2;
-        private System.Windows.Forms.Label lblDesign2;
         private System.Windows.Forms.Label lblLoginHeading2;
         private System.Windows.Forms.Label lblPlayer;
     }

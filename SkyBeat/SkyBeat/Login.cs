@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace SkyBeat
 {
@@ -95,7 +96,16 @@ namespace SkyBeat
 
         private void lblForgotPass_Click(object sender, EventArgs e)
         {
+            string UsernamePrompt = Interaction.InputBox("Please enter Username", "Forgot Password", "Username", -1, 1);
+            if (UsernamePrompt == "HeleneConradie")
+            {
 
+            }
+            else
+            {
+                MessageBox.Show("Username does not exist!", "Invalid Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            //string SecurityQuestionAnswer = Interaction.InputBox(, "Forgot Password", "");
         }
     }
 }

@@ -35,8 +35,7 @@ namespace SkyBeat
             this.pbGuitar = new System.Windows.Forms.PictureBox();
             this.lblMainHeading3 = new System.Windows.Forms.Label();
             this.lblMainHeading1 = new System.Windows.Forms.Label();
-            this.lblRights = new System.Windows.Forms.Label();
-            this.lblDesignby = new System.Windows.Forms.Label();
+            this.lblRights2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbGuitar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,27 +111,17 @@ namespace SkyBeat
             this.lblMainHeading1.TabIndex = 8;
             this.lblMainHeading1.Text = "SkyBeat";
             // 
-            // lblRights
+            // lblRights2
             // 
-            this.lblRights.AutoSize = true;
-            this.lblRights.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRights.ForeColor = System.Drawing.Color.White;
-            this.lblRights.Location = new System.Drawing.Point(12, 378);
-            this.lblRights.Name = "lblRights";
-            this.lblRights.Size = new System.Drawing.Size(196, 14);
-            this.lblRights.TabIndex = 9;
-            this.lblRights.Text = "@ 2021 SkyBeat. All rights reserved.";
-            // 
-            // lblDesignby
-            // 
-            this.lblDesignby.AutoSize = true;
-            this.lblDesignby.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesignby.ForeColor = System.Drawing.Color.White;
-            this.lblDesignby.Location = new System.Drawing.Point(204, 378);
-            this.lblDesignby.Name = "lblDesignby";
-            this.lblDesignby.Size = new System.Drawing.Size(328, 14);
-            this.lblDesignby.TabIndex = 10;
-            this.lblDesignby.Text = "| Design by Helene Conradie, Henco De Lange, Hermann Smit";
+            this.lblRights2.AutoSize = true;
+            this.lblRights2.Font = new System.Drawing.Font("Bahnschrift", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRights2.ForeColor = System.Drawing.Color.White;
+            this.lblRights2.Location = new System.Drawing.Point(108, 383);
+            this.lblRights2.Name = "lblRights2";
+            this.lblRights2.Size = new System.Drawing.Size(441, 12);
+            this.lblRights2.TabIndex = 15;
+            this.lblRights2.Text = "@ 2021 SkyBeat. All rights reserved. | Design by Helene Conradie, Henco De Lange," +
+    " Hermann Smit";
             // 
             // frmMain
             // 
@@ -140,8 +129,7 @@ namespace SkyBeat
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(664, 401);
-            this.Controls.Add(this.lblDesignby);
-            this.Controls.Add(this.lblRights);
+            this.Controls.Add(this.lblRights2);
             this.Controls.Add(this.lblMainHeading1);
             this.Controls.Add(this.lblMainHeading3);
             this.Controls.Add(this.btnMulti);
@@ -170,8 +158,7 @@ namespace SkyBeat
         private System.Windows.Forms.PictureBox pbGuitar;
         private System.Windows.Forms.Label lblMainHeading3;
         private System.Windows.Forms.Label lblMainHeading1;
-        private System.Windows.Forms.Label lblRights;
-        private System.Windows.Forms.Label lblDesignby;
+        private System.Windows.Forms.Label lblRights2;
     }
 }
 

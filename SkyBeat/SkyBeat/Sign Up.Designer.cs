@@ -52,12 +52,17 @@
             this.pbShowPass2 = new System.Windows.Forms.PictureBox();
             this.pbLockIcon2 = new System.Windows.Forms.PictureBox();
             this.pbUserIcon2 = new System.Windows.Forms.PictureBox();
-            this.lblRights3 = new System.Windows.Forms.Label();
-            this.lblDesign3 = new System.Windows.Forms.Label();
+            this.rtxtSecQuestion = new System.Windows.Forms.RichTextBox();
+            this.lblSecQuestion = new System.Windows.Forms.Label();
+            this.txtSecAnswer = new System.Windows.Forms.TextBox();
+            this.lblSecAnswer = new System.Windows.Forms.Label();
+            this.pbHelp2 = new System.Windows.Forms.PictureBox();
+            this.lblRights = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbHelp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowPass2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLockIcon2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUserIcon2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHelp2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsername2
@@ -165,6 +170,7 @@
             // cmbGender
             // 
             this.cmbGender.BackColor = System.Drawing.Color.White;
+            this.cmbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbGender.FormattingEnabled = true;
             this.cmbGender.Items.AddRange(new object[] {
@@ -258,7 +264,7 @@
             this.pbHelp.Image = ((System.Drawing.Image)(resources.GetObject("pbHelp.Image")));
             this.pbHelp.Location = new System.Drawing.Point(664, 199);
             this.pbHelp.Name = "pbHelp";
-            this.pbHelp.Size = new System.Drawing.Size(30, 29);
+            this.pbHelp.Size = new System.Drawing.Size(30, 26);
             this.pbHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbHelp.TabIndex = 25;
             this.pbHelp.TabStop = false;
@@ -297,25 +303,64 @@
             this.pbUserIcon2.TabIndex = 19;
             this.pbUserIcon2.TabStop = false;
             // 
-            // lblRights3
+            // rtxtSecQuestion
             // 
-            this.lblRights3.AutoSize = true;
-            this.lblRights3.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRights3.Location = new System.Drawing.Point(112, 399);
-            this.lblRights3.Name = "lblRights3";
-            this.lblRights3.Size = new System.Drawing.Size(188, 13);
-            this.lblRights3.TabIndex = 26;
-            this.lblRights3.Text = "@ 2021 SkyBeat. All rights reserved.";
+            this.rtxtSecQuestion.Location = new System.Drawing.Point(267, 107);
+            this.rtxtSecQuestion.Name = "rtxtSecQuestion";
+            this.rtxtSecQuestion.Size = new System.Drawing.Size(156, 66);
+            this.rtxtSecQuestion.TabIndex = 28;
+            this.rtxtSecQuestion.Text = "";
             // 
-            // lblDesign3
+            // lblSecQuestion
             // 
-            this.lblDesign3.AutoSize = true;
-            this.lblDesign3.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesign3.Location = new System.Drawing.Point(297, 399);
-            this.lblDesign3.Name = "lblDesign3";
-            this.lblDesign3.Size = new System.Drawing.Size(306, 13);
-            this.lblDesign3.TabIndex = 27;
-            this.lblDesign3.Text = "| Design by Helene Conradie, Henco De Lange, Hermann Smit";
+            this.lblSecQuestion.AutoSize = true;
+            this.lblSecQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSecQuestion.Location = new System.Drawing.Point(264, 88);
+            this.lblSecQuestion.Name = "lblSecQuestion";
+            this.lblSecQuestion.Size = new System.Drawing.Size(129, 16);
+            this.lblSecQuestion.TabIndex = 29;
+            this.lblSecQuestion.Text = "Security Question";
+            // 
+            // txtSecAnswer
+            // 
+            this.txtSecAnswer.BackColor = System.Drawing.Color.White;
+            this.txtSecAnswer.Location = new System.Drawing.Point(267, 207);
+            this.txtSecAnswer.Name = "txtSecAnswer";
+            this.txtSecAnswer.Size = new System.Drawing.Size(169, 20);
+            this.txtSecAnswer.TabIndex = 30;
+            // 
+            // lblSecAnswer
+            // 
+            this.lblSecAnswer.AutoSize = true;
+            this.lblSecAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSecAnswer.Location = new System.Drawing.Point(264, 188);
+            this.lblSecAnswer.Name = "lblSecAnswer";
+            this.lblSecAnswer.Size = new System.Drawing.Size(118, 16);
+            this.lblSecAnswer.TabIndex = 31;
+            this.lblSecAnswer.Text = "Security Answer";
+            // 
+            // pbHelp2
+            // 
+            this.pbHelp2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbHelp2.Image = ((System.Drawing.Image)(resources.GetObject("pbHelp2.Image")));
+            this.pbHelp2.Location = new System.Drawing.Point(429, 107);
+            this.pbHelp2.Name = "pbHelp2";
+            this.pbHelp2.Size = new System.Drawing.Size(22, 20);
+            this.pbHelp2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbHelp2.TabIndex = 32;
+            this.pbHelp2.TabStop = false;
+            this.pbHelp2.Click += new System.EventHandler(this.pbHelp2_Click);
+            // 
+            // lblRights
+            // 
+            this.lblRights.AutoSize = true;
+            this.lblRights.Font = new System.Drawing.Font("Bahnschrift", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRights.Location = new System.Drawing.Point(147, 404);
+            this.lblRights.Name = "lblRights";
+            this.lblRights.Size = new System.Drawing.Size(441, 12);
+            this.lblRights.TabIndex = 33;
+            this.lblRights.Text = "@ 2021 SkyBeat. All rights reserved. | Design by Helene Conradie, Henco De Lange," +
+    " Hermann Smit";
             // 
             // frmSignup
             // 
@@ -323,8 +368,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(734, 421);
-            this.Controls.Add(this.lblDesign3);
-            this.Controls.Add(this.lblRights3);
+            this.Controls.Add(this.lblRights);
+            this.Controls.Add(this.pbHelp2);
+            this.Controls.Add(this.lblSecAnswer);
+            this.Controls.Add(this.txtSecAnswer);
+            this.Controls.Add(this.lblSecQuestion);
+            this.Controls.Add(this.rtxtSecQuestion);
             this.Controls.Add(this.pbHelp);
             this.Controls.Add(this.lblSignupTnC);
             this.Controls.Add(this.btnCancel);
@@ -358,6 +407,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbShowPass2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLockIcon2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUserIcon2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHelp2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,7 +438,11 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblSignupTnC;
         private System.Windows.Forms.PictureBox pbHelp;
-        private System.Windows.Forms.Label lblRights3;
-        private System.Windows.Forms.Label lblDesign3;
+        private System.Windows.Forms.RichTextBox rtxtSecQuestion;
+        private System.Windows.Forms.Label lblSecQuestion;
+        private System.Windows.Forms.TextBox txtSecAnswer;
+        private System.Windows.Forms.Label lblSecAnswer;
+        private System.Windows.Forms.PictureBox pbHelp2;
+        private System.Windows.Forms.Label lblRights;
     }
 }

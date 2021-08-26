@@ -42,5 +42,6 @@ namespace SkyBeat
             loginM.Show();
             loginM.ReceiveMode(Mode);
         }
+
     }
 }

@@ -28,7 +28,13 @@ namespace SkyBeat
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             string message = "Make use of Characters and Numbers.\nYour password should contain at least 8 characters.";
-            MessageBox.Show(message, "Hint");
+            MessageBox.Show(message, "Hint", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void pbHelp2_Click(object sender, EventArgs e)
+        {
+            string message = "Use a question only you know. \nIt cannot be too long";
+            MessageBox.Show(message, "Hint", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void lblTnC_Click(object sender, EventArgs e)
@@ -41,8 +47,8 @@ namespace SkyBeat
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-            DialogResult termsnconditions = MessageBox.Show("Have you read the terms and conditions?" +
-                "\nDo you agre to the terms and conditions?", "Terms and Conditions", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult termsnconditions = MessageBox.Show("Have you read the terms and conditions?\n" +
+                "By saying yes, you are agreeing with the terms and conditions.","Terms and Conditions", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (termsnconditions == DialogResult.Yes)
             {
                 //Opens next form after calling and applying validation method
@@ -69,5 +75,6 @@ namespace SkyBeat
         {
             Application.Exit();
         }
+
     }
 }
