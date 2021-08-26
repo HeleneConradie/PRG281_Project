@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace SkyBeat
 {
@@ -28,5 +29,21 @@ namespace SkyBeat
 
         }
 
+        private void StartTime()
+        {
+            string TimeLeft = "";
+            for (int i = 60; i < 0; i++)
+            {
+                TimeLeft = "Timer 00:" + i;
+                lblTimer.Text = TimeLeft;
+                Thread.Sleep(1000);
+            }
+        }
+
+        private void frmMainGameForm_Load(object sender, EventArgs e)
+        {
+            Thread TimerThread = new Thread(StartTime);
+            TimerThread.Start();
+        }
     }
 }
