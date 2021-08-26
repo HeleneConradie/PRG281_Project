@@ -263,7 +263,7 @@
             // 
             this.pbHelp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbHelp.Image = ((System.Drawing.Image)(resources.GetObject("pbHelp.Image")));
-            this.pbHelp.Location = new System.Drawing.Point(664, 199);
+            this.pbHelp.Location = new System.Drawing.Point(547, 201);
             this.pbHelp.Name = "pbHelp";
             this.pbHelp.Size = new System.Drawing.Size(30, 26);
             this.pbHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

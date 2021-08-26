@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
@@ -65,27 +66,42 @@ namespace SkyBeat
         //The user is logged in and the next form appears
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            bool success = ValidationLogin();
             cmd = new SqlCommand();
             connection.Open();
             cmd.Connection = connection;
             cmd.CommandText = "SELECT * FROM UserLogin WHERE Username ='" + txtUsername.Text + "' AND UserPassword = '" + txtPass.Text + "'";
             dr = cmd.ExecuteReader();
-            if (dr.Read())
+            if (success == true)
             {
-                MessageBox.Show("Welcome! " + txtUsername.Text, "Login Successful", MessageBoxButtons.OK);
-                this.Hide();
-                frmStart strt = new frmStart();
-                strt.Show();
-            }
-            else
-            {
-                DialogResult res = MessageBox.Show("Invalid Username or Password!", "Invalid Login Details", MessageBoxButtons.OK, 
+                if (dr.Read())
+                {
+                    MessageBox.Show("Welcome! " + txtUsername.Text, "Login Successful", MessageBoxButtons.OK);
+                    this.Hide();
+                    frmStart strt = new frmStart();
+                    strt.Show();
+                }
+                DialogResult res = MessageBox.Show("Invalid Username or Password!", "Invalid Login Details", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
                 txtUsername.Clear();
                 txtPass.Clear();
                 txtUsername.Focus();
             }
+            else if (success == false)
+            {
+                MessageBox.Show("No fields can be left blank!", "Failed to create account", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtUsername.Focus();
+            }
             connection.Close();
+        }
+
+        private bool ValidationLogin()
+        {
+            if (txtUsername == null || txtUsername == null)
+            {
+                return false;
+            }
+            return true;
         }
 
         //Closes the application
