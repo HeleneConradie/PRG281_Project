@@ -81,16 +81,14 @@ namespace SkyBeat
                     frmStart strt = new frmStart();
                     strt.Show();
                 }
-                DialogResult res = MessageBox.Show("Invalid Username or Password!", "Invalid Login Details", MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                txtUsername.Clear();
-                txtPass.Clear();
-                txtUsername.Focus();
-            }
-            else if (success == false)
-            {
-                MessageBox.Show("No fields can be left blank!", "Failed to create account", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtUsername.Focus();
+                else 
+                {
+                    DialogResult res = MessageBox.Show("Invalid Username or Password!", "Invalid Login Details", MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+                    txtUsername.Clear();
+                    txtPass.Clear();
+                    txtUsername.Focus();
+                }
             }
             connection.Close();
         }
@@ -112,16 +110,26 @@ namespace SkyBeat
 
         private void lblForgotPass_Click(object sender, EventArgs e)
         {
+            cmd = new SqlCommand();
+            connection.Open();
+            cmd.Connection = connection;
             string UsernamePrompt = Interaction.InputBox("Please enter Username", "Forgot Password", "Username", -1, 1);
-            if (UsernamePrompt == "HeleneConradie")
-            {
+            cmd.CommandText = "SELECT UserDetails.SecurityQuestion FROM UserDetails INNER JOIN UserLogin " +
+                "ON UserLogin.UserID = UserDetails.UserID WHERE UserLogin.Username ='" + UsernamePrompt + "'";
+            dr = cmd.ExecuteReader();
 
-            }
-            else
+            string Security = Interaction.InputBox(cmd.CommandText, "Security Question", "Answer");
+            cmd.CommandText = "SELECT UserLogin.UserPassword FROM UserLogin INNER JOIN UserDetails " +
+                "ON UserDetails.UserID = UserLogin.UserID WHERE UserDetails.SecurityAnswer ='" + Security + "'";
+            dr = cmd.ExecuteReader();
+
+            if (dr.Read())
             {
-                MessageBox.Show("Username does not exist!", "Invalid Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(cmd.CommandText, "Password", MessageBoxButtons.OK);
             }
-            //string SecurityQuestionAnswer = Interaction.InputBox(, "Forgot Password", "");
+            MessageBox.Show("Could not find the password for the given user!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            
         }
     }
 }
