@@ -39,7 +39,7 @@ namespace SkyBeat
 
         private void pbHelp2_Click(object sender, EventArgs e)
         {
-            string message = "Use a question only you know. \nIt cannot be too long";
+            string message = "Use a question only you know. \nIt cannot be too long\tYou can only make use of aplhabetical characters.";
             MessageBox.Show(message, "Hint", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -66,14 +66,13 @@ namespace SkyBeat
                         cmd = new SqlCommand();
                         connection.Open();
                         cmd.Connection = connection;
-                        cmd.CommandText = "INSERT INTO UserDetails(FirstName, LastName, IDNumber, Gender, Email, SecurityQuestion, SecurityAnswer)" +
-                            "VALUES ('" + txtName.Text + "','" + txtSurname.Text + "', '" + txtID.Text + "', '" + cmbGender.Text + "', '" + txtEmail.Text + "', '" + rtxtSecQuestion.Text + "', '" + txtSecAnswer + "')";
-
+                        cmd.CommandText = "INSERT INTO UserLogin(UserID, Username, UserPassword)" +
+                            "VALUES ('" + txtUserID.Text + "','" + txtUsername2.Text + "','" + txtPass2.Text + "')";
+                        
                         cmd.ExecuteNonQuery();
 
-                        cmd.CommandText = "INSERT INTO UserLogin(Username, UserPassword)" +
-                            "VALUES ('" + txtUsername2.Text + "','" + txtPass2.Text + "')";
-
+                        cmd.CommandText = "INSERT INTO UserDetails(UserID, FirstName, LastName, IDNumber, Gender, Email, SecurityQuestion, SecurityAnswer)" +
+                            "VALUES ('" + txtUserID.Text + "','" + txtName.Text + "','" + txtSurname.Text + "', '" + txtID.Text + "', '" + cmbGender.Text + "', '" + txtEmail.Text + "', '" + rtxtSecQuestion.Text + "', '" + txtSecAnswer.Text + "')";
                         cmd.ExecuteNonQuery();
 
                         connection.Close();
@@ -82,7 +81,10 @@ namespace SkyBeat
                         login.Show();
 
                     }
-                    throw new Exception("Failed to create an account!\nYou need to agree to the terms and conditions.");
+                    if (termsnconditions == DialogResult.No)
+                    {
+                        throw new Exception("Failed to create an account!\nYou need to agree to the terms and conditions.");
+                    }
                 }
             }
             catch (Exception ex)
@@ -127,18 +129,18 @@ namespace SkyBeat
         public bool ValidationSignup()
         {
             Regex nums = new Regex("^[0-9]{13}");
-            Regex strings = new Regex("^[a-zA-Z]{50}");
+            Regex nums2 = new Regex("^[0-9]{2}");
+            Regex strings = new Regex("^[A-Z][a-zA-Z]*$");
             Regex email = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            Regex multi = new Regex("^[a-zA-Z0-9]{50}");
             bool isValidName = strings.IsMatch(txtName.Text);
             bool isValidSurname = strings.IsMatch(txtSurname.Text);
             bool isValidemail = email.IsMatch(txtEmail.Text);
             bool isValidid = nums.IsMatch(txtID.Text);
-            bool isValidSecQues = multi.IsMatch(rtxtSecQuestion.Text);
-            bool isValidSecAnswer = multi.IsMatch(txtSecAnswer.Text);
+            bool isValidSecQues = strings.IsMatch(rtxtSecQuestion.Text);
+            bool isValidSecAnswer = strings.IsMatch(txtSecAnswer.Text);
 
             if (txtName.Text == "" || txtSurname.Text == "" || txtID.Text == "" || txtEmail.Text == "" || cmbGender.Text == null
-                || txtSecAnswer.Text == null || rtxtSecQuestion == null)
+                || txtSecAnswer.Text == null || rtxtSecQuestion == null || txtUserID.Text == null)
             {
                 MessageBox.Show("No fields can be left blank!", "Failed to create account", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtName.Focus();
@@ -174,21 +176,48 @@ namespace SkyBeat
                 txtEmail.Focus();
                 return false;
             }
-            if (!isValidSecQues)
-            {
-                MessageBox.Show("Please enter Security Question!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                rtxtSecQuestion.Focus();
-                return false;
-            }
+            //if (!isValidSecQues)
+            //{
+            //MessageBox.Show("Please enter Security Question!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //rtxtSecQuestion.Focus();
+            // return false;
+            //}
             if (!isValidSecAnswer)
             {
                 MessageBox.Show("Please enter valid Security Answer!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtSecAnswer.Focus();
                 return false;
             }
+            return true;
+        }
+
+        private void frmSignup_Load(object sender, EventArgs e)
+        {
+            GenerateID();
+        }
+
+        public bool GenerateID()
+        {
+            string userid = "";
+            cmd = new SqlCommand();
+            connection.Open();
+            cmd.Connection = connection;
+            cmd.CommandText = "SELECT MAX(UserID) FROM UserLogin";
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    userid = reader[0].ToString();
+                }
+            }
+            reader.Close();
+            int userid2 = int.Parse(userid);
+            txtUserID.Text = (userid2 + 1).ToString();
+            reader.Close();
+            connection.Close();
 
             return true;
-
         }
     }
 }

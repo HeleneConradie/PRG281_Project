@@ -21,13 +21,14 @@ namespace SkyBeat
         SqlConnection connection;
         SqlCommand cmd;
         SqlDataReader dr;
+
         public frmLogin()
         {
             InitializeComponent();
             connection = new SqlConnection("Server=DESKTOP-MK3GTIU\\SQLEXPRESS; Initial Catalog = dbdSkyBeat; Integrated security = SSPI");
         }
 
-        //Method is used in frmMain (Choose Option Form)
+        //Method is used in Main Menu
         public void ReceiveMode(int mode)
         {
             this.ModeNumber = mode;
@@ -41,7 +42,7 @@ namespace SkyBeat
             }
         }
 
-        //Goes to frmSignUp (Sign Up Form)
+        //Takes the user to the signup form
         private void lblSignup_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -65,7 +66,7 @@ namespace SkyBeat
             txtPass.PasswordChar = '*';
         }
 
-        //The user is logged in and the next form appears
+        //The fields are validated and the user is logged in and taken to the next form 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string Username = txtUsername.Text;
@@ -116,6 +117,8 @@ namespace SkyBeat
             connection.Close();
         }
 
+
+        //Validation that the fields cannot be empty
         private bool ValidationLogin()
         {
             if (txtUsername == null || txtUsername == null)
@@ -131,6 +134,7 @@ namespace SkyBeat
             Application.Exit();
         }
 
+        //When forgot password is clicked, the following method is called
         private void lblForgotPass_Click(object sender, EventArgs e)
         {
             string question = "";
@@ -187,6 +191,11 @@ namespace SkyBeat
                 MessageBox.Show(pass, "Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             connection.Close();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -251,6 +251,7 @@ namespace SkyBeat
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblLoginHeading1);
             this.Controls.Add(this.pbEarphones);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(750, 400);
             this.MinimumSize = new System.Drawing.Size(750, 400);
@@ -259,6 +260,7 @@ namespace SkyBeat
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbEarphones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLockIcon)).EndInit();

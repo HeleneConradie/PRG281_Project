@@ -59,6 +59,8 @@
             this.pbHelp2 = new System.Windows.Forms.PictureBox();
             this.lblRights = new System.Windows.Forms.Label();
             this.lblClear = new System.Windows.Forms.Label();
+            this.txtUserID = new System.Windows.Forms.TextBox();
+            this.lblID2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbHelp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowPass2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLockIcon2)).BeginInit();
@@ -263,7 +265,7 @@
             // 
             this.pbHelp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbHelp.Image = ((System.Drawing.Image)(resources.GetObject("pbHelp.Image")));
-            this.pbHelp.Location = new System.Drawing.Point(547, 201);
+            this.pbHelp.Location = new System.Drawing.Point(686, 201);
             this.pbHelp.Name = "pbHelp";
             this.pbHelp.Size = new System.Drawing.Size(30, 26);
             this.pbHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -375,12 +377,33 @@
             this.lblClear.Text = "Clear Fields";
             this.lblClear.Click += new System.EventHandler(this.lblClear_Click);
             // 
+            // txtUserID
+            // 
+            this.txtUserID.Enabled = false;
+            this.txtUserID.Location = new System.Drawing.Point(577, 200);
+            this.txtUserID.Name = "txtUserID";
+            this.txtUserID.ReadOnly = true;
+            this.txtUserID.Size = new System.Drawing.Size(46, 20);
+            this.txtUserID.TabIndex = 35;
+            // 
+            // lblID2
+            // 
+            this.lblID2.AutoSize = true;
+            this.lblID2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID2.Location = new System.Drawing.Point(544, 201);
+            this.lblID2.Name = "lblID2";
+            this.lblID2.Size = new System.Drawing.Size(23, 16);
+            this.lblID2.TabIndex = 36;
+            this.lblID2.Text = "ID";
+            // 
             // frmSignup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(734, 421);
+            this.Controls.Add(this.lblID2);
+            this.Controls.Add(this.txtUserID);
             this.Controls.Add(this.lblClear);
             this.Controls.Add(this.lblRights);
             this.Controls.Add(this.pbHelp2);
@@ -417,6 +440,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign Up";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSignup_FormClosing);
+            this.Load += new System.EventHandler(this.frmSignup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbHelp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowPass2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLockIcon2)).EndInit();
@@ -459,5 +483,7 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.RichTextBox rtxtSecQuestion;
         private System.Windows.Forms.TextBox txtSecAnswer;
+        private System.Windows.Forms.TextBox txtUserID;
+        private System.Windows.Forms.Label lblID2;
     }
 }
