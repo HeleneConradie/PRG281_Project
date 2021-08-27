@@ -110,26 +110,60 @@ namespace SkyBeat
 
         private void lblForgotPass_Click(object sender, EventArgs e)
         {
+            string question = "";
+            string pass = "";
             cmd = new SqlCommand();
             connection.Open();
             cmd.Connection = connection;
             string UsernamePrompt = Interaction.InputBox("Please enter Username", "Forgot Password", "Username", -1, 1);
             cmd.CommandText = "SELECT UserDetails.SecurityQuestion FROM UserDetails INNER JOIN UserLogin " +
                 "ON UserLogin.UserID = UserDetails.UserID WHERE UserLogin.Username ='" + UsernamePrompt + "'";
-            dr = cmd.ExecuteReader();
-
-            string Security = Interaction.InputBox(cmd.CommandText, "Security Question", "Answer");
-            cmd.CommandText = "SELECT UserLogin.UserPassword FROM UserLogin INNER JOIN UserDetails " +
-                "ON UserDetails.UserID = UserLogin.UserID WHERE UserDetails.SecurityAnswer ='" + Security + "'";
-            dr = cmd.ExecuteReader();
-
-            if (dr.Read())
-            {
-                MessageBox.Show(cmd.CommandText, "Password", MessageBoxButtons.OK);
-            }
-            MessageBox.Show("Could not find the password for the given user!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             
+            bool returnvalue = false;
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    question = reader["SecurityQuestion"].ToString();
+                }
+                returnvalue = true;
+            }
+            else
+            {
+                returnvalue = false;
+                MessageBox.Show("Username not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            reader.Close();
+
+            bool returnvalue2 = false;
+            if (returnvalue == true)
+            {
+                string Security = Interaction.InputBox(question, "Security Question", "Answer");
+                cmd.CommandText = "SELECT UserLogin.UserPassword FROM UserLogin INNER JOIN UserDetails " +
+                    "ON UserDetails.UserID = UserLogin.UserID WHERE UserDetails.SecurityAnswer ='" + Security + "' AND UserLogin.Username = '" + UsernamePrompt+ "'";
+
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        pass = reader["UserPassword"].ToString();
+                    }
+                    returnvalue2 = true;
+                }
+                else
+                {
+                    returnvalue2 = false;
+                    MessageBox.Show("Security question was not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            if (returnvalue2 == true)
+            {
+                MessageBox.Show(pass, "Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            connection.Close();
         }
     }
 }
