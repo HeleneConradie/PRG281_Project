@@ -13,6 +13,9 @@ namespace SkyBeat
 {
     public partial class frmMainGameForm : Form
     {
+
+        public int StartTime = 60;
+        public Thread thread1 = null;
         public frmMainGameForm()
         {
             InitializeComponent();
@@ -29,21 +32,38 @@ namespace SkyBeat
 
         }
 
-        private void StartTime()
-        {
-            string TimeLeft = "";
-            for (int i = 60; i < 0; i++)
-            {
-                TimeLeft = "Timer 00:" + i;
-                lblTimer.Text = TimeLeft;
-                Thread.Sleep(1000);
-            }
-        }
+        public delegate void Time();
 
         private void frmMainGameForm_Load(object sender, EventArgs e)
         {
-            Thread TimerThread = new Thread(StartTime);
-            TimerThread.Start();
+            thread1 = new Thread(new ThreadStart(StartTiming));
+            thread1.Start();
+        }
+
+        public void StartTimer()
+        {
+            if (lblTimer.InvokeRequired)
+            {
+                Time TimerThr = new Time(StartTimer);
+                this.Invoke(TimerThr);
+            }
+            else
+            {
+                var Layout = TimeSpan.FromSeconds(StartTime);
+                lblTimer.Text = "Time Left \"" + Layout.ToString(@"mm\:ss") + "\"";
+            }
+        }
+
+
+        public void StartTiming()
+        {
+            for (int i = 60; i >= 0; i--)
+            {
+                StartTimer();
+                StartTime--;
+                Thread.Sleep(1000);
+            }
+            MessageBox.Show("Your time is up", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -23,9 +24,11 @@ namespace SkyBeat
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+
             this.Hide();
             frmMainGameForm game = new frmMainGameForm();
             game.Show();
+            
         }
 
         private void btnMainMenu_Click(object sender, EventArgs e)
@@ -47,5 +50,8 @@ namespace SkyBeat
             this.player2 = two;
             
         }
+
+        
+        
     }
 }

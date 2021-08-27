@@ -77,8 +77,8 @@ namespace SkyBeat
 
                         connection.Close();
                         this.Hide();
-                        frmLogin login = new frmLogin();
-                        login.Show();
+                        frmMain mainmenu = new frmMain();
+                        mainmenu.Show();
 
                     }
                     if (termsnconditions == DialogResult.No)

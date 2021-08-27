@@ -47,6 +47,8 @@ namespace SkyBeat
             this.lblRights2 = new System.Windows.Forms.Label();
             this.lblLoginHeading2 = new System.Windows.Forms.Label();
             this.lblPlayer = new System.Windows.Forms.Label();
+            this.lblViewPlayers = new System.Windows.Forms.Label();
+            this.rtxtViewAll = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbEarphones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLockIcon)).BeginInit();
@@ -228,12 +230,34 @@ namespace SkyBeat
             this.lblPlayer.TabIndex = 17;
             this.lblPlayer.Text = "Player";
             // 
+            // lblViewPlayers
+            // 
+            this.lblViewPlayers.AutoSize = true;
+            this.lblViewPlayers.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblViewPlayers.Location = new System.Drawing.Point(619, 100);
+            this.lblViewPlayers.Name = "lblViewPlayers";
+            this.lblViewPlayers.Size = new System.Drawing.Size(102, 16);
+            this.lblViewPlayers.TabIndex = 18;
+            this.lblViewPlayers.Text = "View all Players";
+            this.lblViewPlayers.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblViewPlayers_MouseDown);
+            this.lblViewPlayers.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lblViewPlayers_MouseUp);
+            // 
+            // rtxtViewAll
+            // 
+            this.rtxtViewAll.Location = new System.Drawing.Point(622, 122);
+            this.rtxtViewAll.Name = "rtxtViewAll";
+            this.rtxtViewAll.Size = new System.Drawing.Size(100, 115);
+            this.rtxtViewAll.TabIndex = 19;
+            this.rtxtViewAll.Text = "";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(734, 361);
+            this.Controls.Add(this.rtxtViewAll);
+            this.Controls.Add(this.lblViewPlayers);
             this.Controls.Add(this.lblPlayer);
             this.Controls.Add(this.lblLoginHeading2);
             this.Controls.Add(this.lblRights2);
@@ -289,5 +313,7 @@ namespace SkyBeat
         private System.Windows.Forms.Label lblRights2;
         private System.Windows.Forms.Label lblLoginHeading2;
         private System.Windows.Forms.Label lblPlayer;
+        private System.Windows.Forms.Label lblViewPlayers;
+        private System.Windows.Forms.RichTextBox rtxtViewAll;
     }
 }

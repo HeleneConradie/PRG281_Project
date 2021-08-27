@@ -188,11 +188,11 @@ namespace SkyBeat
         private System.Windows.Forms.CheckBox cb1;
         private System.Windows.Forms.Label lblMainGameHeading1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.CheckBox cb2;
         private System.Windows.Forms.CheckBox cb3;
         private System.Windows.Forms.CheckBox cb4;
         private System.Windows.Forms.CheckBox cb5;
         private System.Windows.Forms.Button btnExit;
+        public System.Windows.Forms.Label lblTimer;
     }
 }
