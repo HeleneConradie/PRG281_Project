@@ -12,6 +12,10 @@ namespace SkyBeat
 {
     public partial class frmStart : Form
     {
+        public int modeType;
+        public string player1;
+        public string player2;
+
         public frmStart()
         {
             InitializeComponent();
@@ -34,6 +38,14 @@ namespace SkyBeat
                 frmMain MainMenu = new frmMain();
                 MainMenu.Show();
             }
+        }
+
+        public void ReceiveMode(string one, string two, int x)
+        {
+            this.modeType = x;
+            this.player1 = one;
+            this.player2 = two;
+            
         }
     }
 }

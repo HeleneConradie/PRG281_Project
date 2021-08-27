@@ -16,6 +16,8 @@ namespace SkyBeat
     public partial class frmLogin : Form
     {
         int ModeNumber;
+        int loginCount = 0;
+        string[] loginCompare = new string[1];
         SqlConnection connection;
         SqlCommand cmd;
         SqlDataReader dr;
@@ -66,6 +68,15 @@ namespace SkyBeat
         //The user is logged in and the next form appears
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            string Username = txtUsername.Text;
+            if (loginCount == 0)
+            {
+                loginCompare[0] = Username;
+            }
+            else
+            {
+                loginCompare[1] = Username;
+            }
             bool success = ValidationLogin();
             cmd = new SqlCommand();
             connection.Open();
@@ -76,10 +87,14 @@ namespace SkyBeat
             {
                 if (dr.Read())
                 {
+                    if (ModeNumber == 2)
+                    {
+                        lblPlayer.Text = "Player 2";
+                    }
                     MessageBox.Show("Welcome! " + txtUsername.Text, "Login Successful", MessageBoxButtons.OK);
-                    this.Hide();
-                    frmStart strt = new frmStart();
-                    strt.Show();
+                    txtUsername.Clear();
+                    txtPass.Clear();
+                    txtUsername.Focus();
                 }
                 else 
                 {
@@ -88,6 +103,14 @@ namespace SkyBeat
                     txtUsername.Clear();
                     txtPass.Clear();
                     txtUsername.Focus();
+                }
+
+                if (loginCount == ModeNumber)
+                {
+                    this.Hide();
+                    frmStart strt = new frmStart();
+                    strt.Show();
+                    strt.ReceiveMode(loginCompare[0], loginCompare[1], ModeNumber);
                 }
             }
             connection.Close();

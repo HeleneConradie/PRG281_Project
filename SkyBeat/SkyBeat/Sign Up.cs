@@ -77,10 +77,10 @@ namespace SkyBeat
                         cmd.ExecuteNonQuery();
 
                         connection.Close();
-
                         this.Hide();
                         frmLogin login = new frmLogin();
                         login.Show();
+
                     }
                     throw new Exception("Failed to create an account!\nYou need to agree to the terms and conditions.");
                 }
@@ -116,7 +116,7 @@ namespace SkyBeat
             txtName.Clear();
             txtSurname.Clear();
             txtID.Clear();
-            cmbGender.Text = "";
+            cmbGender.SelectedIndex = -1;
             txtEmail.Clear();
             rtxtSecQuestion.Clear();
             txtSecAnswer.Clear();
@@ -124,7 +124,7 @@ namespace SkyBeat
             txtPass2.Clear();
         }
 
-        private bool ValidationSignup()
+        public bool ValidationSignup()
         {
             Regex nums = new Regex("^[0-9]{13}");
             Regex strings = new Regex("^[a-zA-Z]{50}");
@@ -137,7 +137,7 @@ namespace SkyBeat
             bool isValidSecQues = multi.IsMatch(rtxtSecQuestion.Text);
             bool isValidSecAnswer = multi.IsMatch(txtSecAnswer.Text);
 
-            if (txtName.Text == "" || txtSurname.Text == "" || txtID.Text == "" || txtEmail.Text == "" || cmbGender.Text == null 
+            if (txtName.Text == "" || txtSurname.Text == "" || txtID.Text == "" || txtEmail.Text == "" || cmbGender.Text == null
                 || txtSecAnswer.Text == null || rtxtSecQuestion == null)
             {
                 MessageBox.Show("No fields can be left blank!", "Failed to create account", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -164,7 +164,7 @@ namespace SkyBeat
             }
             if (!isValidSurname)
             {
-                MessageBox.Show("Please enter valid Last Name!", "Last Name Error" ,MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter valid Last Name!", "Last Name Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtSurname.Focus();
                 return false;
             }
@@ -188,7 +188,7 @@ namespace SkyBeat
             }
 
             return true;
-        }
 
+        }
     }
 }

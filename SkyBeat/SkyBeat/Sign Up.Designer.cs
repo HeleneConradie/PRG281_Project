@@ -430,34 +430,34 @@
         #endregion
 
         private System.Windows.Forms.Label lblUsername2;
-        private System.Windows.Forms.TextBox txtUsername2;
         private System.Windows.Forms.Label lblPass2;
-        private System.Windows.Forms.TextBox txtPass2;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblSurname;
-        private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblGender;
-        private System.Windows.Forms.ComboBox cmbGender;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblSignupHeading1;
         private System.Windows.Forms.Button btnCreateAccount;
         private System.Windows.Forms.PictureBox pbUserIcon2;
         private System.Windows.Forms.PictureBox pbLockIcon2;
         private System.Windows.Forms.PictureBox pbShowPass2;
         private System.Windows.Forms.Label lblSignupHeading2;
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblSignupTnC;
         private System.Windows.Forms.PictureBox pbHelp;
-        private System.Windows.Forms.RichTextBox rtxtSecQuestion;
         private System.Windows.Forms.Label lblSecQuestion;
-        private System.Windows.Forms.TextBox txtSecAnswer;
         private System.Windows.Forms.Label lblSecAnswer;
         private System.Windows.Forms.PictureBox pbHelp2;
         private System.Windows.Forms.Label lblRights;
         private System.Windows.Forms.Label lblClear;
+        private System.Windows.Forms.TextBox txtUsername2;
+        private System.Windows.Forms.TextBox txtPass2;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.ComboBox cmbGender;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.RichTextBox rtxtSecQuestion;
+        private System.Windows.Forms.TextBox txtSecAnswer;
     }
 }
