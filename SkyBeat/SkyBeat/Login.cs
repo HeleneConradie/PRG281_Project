@@ -17,7 +17,7 @@ namespace SkyBeat
     {
         int ModeNumber;
         int loginCount = 0;
-        string[] loginCompare = new string[1];
+        string[] loginCompare = new string[2];
         SqlConnection connection;
         SqlCommand cmd;
         SqlDataReader dr;
@@ -32,6 +32,7 @@ namespace SkyBeat
         public void ReceiveMode(int mode)
         {
             this.ModeNumber = mode;
+            loginCount = 0;
             if (ModeNumber==1)
             {
                 lblPlayer.Text = "";
@@ -88,6 +89,7 @@ namespace SkyBeat
             {
                 if (dr.Read())
                 {
+                    loginCount++;
                     if (ModeNumber == 2)
                     {
                         lblPlayer.Text = "Player 2";
@@ -99,7 +101,7 @@ namespace SkyBeat
                 }
                 else 
                 {
-                    DialogResult res = MessageBox.Show("Invalid Username or Password!", "Invalid Login Details", MessageBoxButtons.OK,
+                    MessageBox.Show("Invalid Username or Password!", "Invalid Login Details", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                     txtUsername.Clear();
                     txtPass.Clear();
