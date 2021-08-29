@@ -13,10 +13,11 @@ using Microsoft.VisualBasic;
 
 namespace SkyBeat
 {
-    public partial class frmLogin : Form
+    public partial class frmLogin : Form, IComparable
     {
         int ModeNumber;
         int loginCount = 0;
+        string id, name;
         string[] loginCompare = new string[2];
         SqlConnection connection;
         SqlCommand cmd;
@@ -26,6 +27,12 @@ namespace SkyBeat
         {
             InitializeComponent();
             connection = new SqlConnection("Server=DESKTOP-MK3GTIU\\SQLEXPRESS; Initial Catalog = dbdSkyBeat; Integrated security = SSPI");
+        }
+
+        public frmLogin(string id, string name)
+        {
+            this.id = id;
+            this.name = name;
         }
 
         //Method is used in Main Menu
@@ -114,8 +121,8 @@ namespace SkyBeat
                     {
                         this.Hide();
                         frmStart strt = new frmStart();
-                        strt.Show();
-                        strt.ReceiveMode(loginCompare[0], loginCompare[1], ModeNumber);
+                        GameHandler gamehandler = new GameHandler();
+                        gamehandler.ReceiveMode(loginCompare[0], loginCompare[1], ModeNumber);
                     }
                 }
                 connection.Close();
@@ -218,33 +225,45 @@ namespace SkyBeat
             rtxtViewAll.Hide();
         }
 
-            
+        List<frmLogin> usernames = new List<frmLogin>();
         private void lblViewPlayers_MouseDown(object sender, MouseEventArgs e)
         {
+            
             rtxtViewAll.Show();
-                string name = "";
-                cmd = new SqlCommand();
-                connection.Open();
-                cmd.Connection = connection;
-                cmd.CommandText = "SELECT Username FROM UserLogin";
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        name = reader["Username"].ToString();
-                        rtxtViewAll.Text +=  name + "\n";
-                        name = "";
-                    }
-
+            string name;
+            string id;
+            cmd = new SqlCommand();
+            connection.Open();
+            cmd.Connection = connection;
+            cmd.CommandText = "SELECT UserID,Username FROM UserLogin";
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                { 
+                    id = reader["UserID"].ToString();
+                    name = reader["Username"].ToString();
+                    rtxtViewAll.Text +=  id + " " + name + "\n";
+                    usernames.Add(new frmLogin(id, name));
+                    name = "";
+                    id = "";
                 }
-                connection.Close();            
+
+            }
+            connection.Close();
+            usernames.Sort();
         }
 
         private void lblViewPlayers_MouseUp(object sender, MouseEventArgs e)
         {
             rtxtViewAll.Hide();
             rtxtViewAll.Clear();
+        }
+
+        public int CompareTo(object obj)
+        {
+            frmLogin userobj = obj as frmLogin;
+            return this.id.CompareTo(userobj.id);
         }
     }
 }

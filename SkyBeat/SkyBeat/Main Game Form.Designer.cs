@@ -1,7 +1,7 @@
 ﻿
 namespace SkyBeat
 {
-    partial class frmMainGameForm
+    partial class frmMainGame
     {
         /// <summary>
         /// Required designer variable.
@@ -29,30 +29,42 @@ namespace SkyBeat
         /// </summary>
         private void InitializeComponent()
         {
-            this.cb1 = new System.Windows.Forms.CheckBox();
+            this.cbPop = new System.Windows.Forms.CheckBox();
             this.lblMainGameHeading1 = new System.Windows.Forms.Label();
             this.lblTimer = new System.Windows.Forms.Label();
-            this.cb2 = new System.Windows.Forms.CheckBox();
-            this.cb3 = new System.Windows.Forms.CheckBox();
-            this.cb4 = new System.Windows.Forms.CheckBox();
-            this.cb5 = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbArtist = new System.Windows.Forms.PictureBox();
+            this.cbRock = new System.Windows.Forms.CheckBox();
+            this.cbMetal = new System.Windows.Forms.CheckBox();
+            this.cbCountry = new System.Windows.Forms.CheckBox();
+            this.cbHipHop = new System.Windows.Forms.CheckBox();
             this.btnExit = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbArtist)).BeginInit();
+            this.pnlGame = new System.Windows.Forms.Panel();
+            this.lblQuestion = new System.Windows.Forms.Label();
+            this.pbMnM = new System.Windows.Forms.PictureBox();
+            this.btnLinkin = new System.Windows.Forms.Button();
+            this.PicBQuestions = new System.Windows.Forms.PictureBox();
+            this.btnKaty = new System.Windows.Forms.Button();
+            this.btnDoorsDown = new System.Windows.Forms.Button();
+            this.btnHooba = new System.Windows.Forms.Button();
+            this.btnDolly = new System.Windows.Forms.Button();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.lblPlayer = new System.Windows.Forms.Label();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.pnlGame.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMnM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBQuestions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // cb1
+            // cbPop
             // 
-            this.cb1.AutoSize = true;
-            this.cb1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb1.Location = new System.Drawing.Point(378, 105);
-            this.cb1.Name = "cb1";
-            this.cb1.Size = new System.Drawing.Size(55, 23);
-            this.cb1.TabIndex = 1;
-            this.cb1.Text = "Pop";
-            this.cb1.UseVisualStyleBackColor = true;
+            this.cbPop.AutoSize = true;
+            this.cbPop.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPop.Location = new System.Drawing.Point(364, 33);
+            this.cbPop.Name = "cbPop";
+            this.cbPop.Size = new System.Drawing.Size(55, 23);
+            this.cbPop.TabIndex = 1;
+            this.cbPop.Text = "Pop";
+            this.cbPop.UseVisualStyleBackColor = true;
             // 
             // lblMainGameHeading1
             // 
@@ -74,69 +86,49 @@ namespace SkyBeat
             this.lblTimer.TabIndex = 4;
             this.lblTimer.Text = "Timer \"00 : 00 : 21\"";
             // 
-            // cb2
+            // cbRock
             // 
-            this.cb2.AutoSize = true;
-            this.cb2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb2.Location = new System.Drawing.Point(378, 143);
-            this.cb2.Name = "cb2";
-            this.cb2.Size = new System.Drawing.Size(63, 23);
-            this.cb2.TabIndex = 5;
-            this.cb2.Text = "Rock";
-            this.cb2.UseVisualStyleBackColor = true;
+            this.cbRock.AutoSize = true;
+            this.cbRock.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbRock.Location = new System.Drawing.Point(364, 71);
+            this.cbRock.Name = "cbRock";
+            this.cbRock.Size = new System.Drawing.Size(63, 23);
+            this.cbRock.TabIndex = 5;
+            this.cbRock.Text = "Rock";
+            this.cbRock.UseVisualStyleBackColor = true;
             // 
-            // cb3
+            // cbMetal
             // 
-            this.cb3.AutoSize = true;
-            this.cb3.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb3.Location = new System.Drawing.Point(378, 181);
-            this.cb3.Name = "cb3";
-            this.cb3.Size = new System.Drawing.Size(68, 23);
-            this.cb3.TabIndex = 6;
-            this.cb3.Text = "Metal";
-            this.cb3.UseVisualStyleBackColor = true;
+            this.cbMetal.AutoSize = true;
+            this.cbMetal.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMetal.Location = new System.Drawing.Point(364, 109);
+            this.cbMetal.Name = "cbMetal";
+            this.cbMetal.Size = new System.Drawing.Size(68, 23);
+            this.cbMetal.TabIndex = 6;
+            this.cbMetal.Text = "Metal";
+            this.cbMetal.UseVisualStyleBackColor = true;
             // 
-            // cb4
+            // cbCountry
             // 
-            this.cb4.AutoSize = true;
-            this.cb4.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb4.Location = new System.Drawing.Point(378, 219);
-            this.cb4.Name = "cb4";
-            this.cb4.Size = new System.Drawing.Size(85, 23);
-            this.cb4.TabIndex = 7;
-            this.cb4.Text = "Country";
-            this.cb4.UseVisualStyleBackColor = true;
+            this.cbCountry.AutoSize = true;
+            this.cbCountry.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCountry.Location = new System.Drawing.Point(364, 147);
+            this.cbCountry.Name = "cbCountry";
+            this.cbCountry.Size = new System.Drawing.Size(85, 23);
+            this.cbCountry.TabIndex = 7;
+            this.cbCountry.Text = "Country";
+            this.cbCountry.UseVisualStyleBackColor = true;
             // 
-            // cb5
+            // cbHipHop
             // 
-            this.cb5.AutoSize = true;
-            this.cb5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb5.Location = new System.Drawing.Point(378, 257);
-            this.cb5.Name = "cb5";
-            this.cb5.Size = new System.Drawing.Size(85, 23);
-            this.cb5.TabIndex = 8;
-            this.cb5.Text = "Hip Hop";
-            this.cb5.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SkyBeat.Properties.Resources.Music_Notes;
-            this.pictureBox1.Location = new System.Drawing.Point(168, 248);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(243, 165);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pbArtist
-            // 
-            this.pbArtist.Image = global::SkyBeat.Properties.Resources.Elvis_Presley;
-            this.pbArtist.Location = new System.Drawing.Point(12, 105);
-            this.pbArtist.Name = "pbArtist";
-            this.pbArtist.Size = new System.Drawing.Size(200, 150);
-            this.pbArtist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbArtist.TabIndex = 0;
-            this.pbArtist.TabStop = false;
+            this.cbHipHop.AutoSize = true;
+            this.cbHipHop.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbHipHop.Location = new System.Drawing.Point(364, 185);
+            this.cbHipHop.Name = "cbHipHop";
+            this.cbHipHop.Size = new System.Drawing.Size(85, 23);
+            this.cbHipHop.TabIndex = 8;
+            this.cbHipHop.Text = "Hip Hop";
+            this.cbHipHop.UseVisualStyleBackColor = true;
             // 
             // btnExit
             // 
@@ -150,49 +142,190 @@ namespace SkyBeat
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // frmMainGameForm
+            // pnlGame
+            // 
+            this.pnlGame.Controls.Add(this.cbHipHop);
+            this.pnlGame.Controls.Add(this.cbCountry);
+            this.pnlGame.Controls.Add(this.cbMetal);
+            this.pnlGame.Controls.Add(this.cbRock);
+            this.pnlGame.Controls.Add(this.cbPop);
+            this.pnlGame.Controls.Add(this.lblQuestion);
+            this.pnlGame.Controls.Add(this.pbMnM);
+            this.pnlGame.Controls.Add(this.btnLinkin);
+            this.pnlGame.Controls.Add(this.PicBQuestions);
+            this.pnlGame.Controls.Add(this.btnKaty);
+            this.pnlGame.Controls.Add(this.btnDoorsDown);
+            this.pnlGame.Controls.Add(this.btnHooba);
+            this.pnlGame.Controls.Add(this.btnDolly);
+            this.pnlGame.Controls.Add(this.pbLogo);
+            this.pnlGame.Location = new System.Drawing.Point(12, 72);
+            this.pnlGame.Name = "pnlGame";
+            this.pnlGame.Size = new System.Drawing.Size(484, 301);
+            this.pnlGame.TabIndex = 10;
+            // 
+            // lblQuestion
+            // 
+            this.lblQuestion.AutoSize = true;
+            this.lblQuestion.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion.Location = new System.Drawing.Point(3, 13);
+            this.lblQuestion.Name = "lblQuestion";
+            this.lblQuestion.Size = new System.Drawing.Size(72, 18);
+            this.lblQuestion.TabIndex = 16;
+            this.lblQuestion.Text = "Question";
+            // 
+            // pbMnM
+            // 
+            this.pbMnM.Image = global::SkyBeat.Properties.Resources.Eminem2;
+            this.pbMnM.Location = new System.Drawing.Point(0, 203);
+            this.pbMnM.Name = "pbMnM";
+            this.pbMnM.Size = new System.Drawing.Size(120, 81);
+            this.pbMnM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMnM.TabIndex = 15;
+            this.pbMnM.TabStop = false;
+            // 
+            // btnLinkin
+            // 
+            this.btnLinkin.Location = new System.Drawing.Point(353, 185);
+            this.btnLinkin.Name = "btnLinkin";
+            this.btnLinkin.Size = new System.Drawing.Size(98, 23);
+            this.btnLinkin.TabIndex = 11;
+            this.btnLinkin.Text = "Linkin Park";
+            this.btnLinkin.UseVisualStyleBackColor = true;
+            this.btnLinkin.Click += new System.EventHandler(this.btnLinkin_Click);
+            // 
+            // PicBQuestions
+            // 
+            this.PicBQuestions.Image = global::SkyBeat.Properties.Resources.Elvis_Presley;
+            this.PicBQuestions.Location = new System.Drawing.Point(0, 58);
+            this.PicBQuestions.Name = "PicBQuestions";
+            this.PicBQuestions.Size = new System.Drawing.Size(200, 150);
+            this.PicBQuestions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicBQuestions.TabIndex = 0;
+            this.PicBQuestions.TabStop = false;
+            // 
+            // btnKaty
+            // 
+            this.btnKaty.Location = new System.Drawing.Point(350, 34);
+            this.btnKaty.Name = "btnKaty";
+            this.btnKaty.Size = new System.Drawing.Size(98, 23);
+            this.btnKaty.TabIndex = 13;
+            this.btnKaty.Text = "Katy Perry";
+            this.btnKaty.UseVisualStyleBackColor = true;
+            this.btnKaty.Click += new System.EventHandler(this.btnKaty_Click);
+            // 
+            // btnDoorsDown
+            // 
+            this.btnDoorsDown.Location = new System.Drawing.Point(350, 71);
+            this.btnDoorsDown.Name = "btnDoorsDown";
+            this.btnDoorsDown.Size = new System.Drawing.Size(101, 23);
+            this.btnDoorsDown.TabIndex = 14;
+            this.btnDoorsDown.Text = "3 Doors Down";
+            this.btnDoorsDown.UseVisualStyleBackColor = true;
+            this.btnDoorsDown.Click += new System.EventHandler(this.btnDoorsDown_Click);
+            // 
+            // btnHooba
+            // 
+            this.btnHooba.Location = new System.Drawing.Point(350, 110);
+            this.btnHooba.Name = "btnHooba";
+            this.btnHooba.Size = new System.Drawing.Size(98, 23);
+            this.btnHooba.TabIndex = 12;
+            this.btnHooba.Text = "Hoobastank";
+            this.btnHooba.UseVisualStyleBackColor = true;
+            this.btnHooba.Click += new System.EventHandler(this.btnHooba_Click);
+            // 
+            // btnDolly
+            // 
+            this.btnDolly.Location = new System.Drawing.Point(350, 147);
+            this.btnDolly.Name = "btnDolly";
+            this.btnDolly.Size = new System.Drawing.Size(101, 23);
+            this.btnDolly.TabIndex = 0;
+            this.btnDolly.Text = "Dolly Parton";
+            this.btnDolly.UseVisualStyleBackColor = true;
+            this.btnDolly.Click += new System.EventHandler(this.btnDolly_Click);
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.Image = global::SkyBeat.Properties.Resources.Music_Notes;
+            this.pbLogo.Location = new System.Drawing.Point(189, 194);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(243, 165);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 3;
+            this.pbLogo.TabStop = false;
+            // 
+            // lblPlayer
+            // 
+            this.lblPlayer.AutoSize = true;
+            this.lblPlayer.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayer.Location = new System.Drawing.Point(18, 50);
+            this.lblPlayer.Name = "lblPlayer";
+            this.lblPlayer.Size = new System.Drawing.Size(41, 15);
+            this.lblPlayer.TabIndex = 11;
+            this.lblPlayer.Text = "Player";
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.White;
+            this.btnNext.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.Location = new System.Drawing.Point(472, 292);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(100, 30);
+            this.btnNext.TabIndex = 12;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // frmMainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(584, 411);
             this.ControlBox = false;
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.lblPlayer);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.pbArtist);
-            this.Controls.Add(this.cb5);
-            this.Controls.Add(this.cb4);
-            this.Controls.Add(this.cb3);
-            this.Controls.Add(this.cb2);
             this.Controls.Add(this.lblTimer);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblMainGameHeading1);
-            this.Controls.Add(this.cb1);
+            this.Controls.Add(this.pnlGame);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(600, 450);
             this.MinimumSize = new System.Drawing.Size(600, 450);
-            this.Name = "frmMainGameForm";
+            this.Name = "frmMainGame";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainGameForm";
             this.Load += new System.EventHandler(this.frmMainGameForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbArtist)).EndInit();
+            this.pnlGame.ResumeLayout(false);
+            this.pnlGame.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMnM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBQuestions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pbArtist;
-        private System.Windows.Forms.CheckBox cb1;
         private System.Windows.Forms.Label lblMainGameHeading1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.CheckBox cb2;
-        private System.Windows.Forms.CheckBox cb3;
-        private System.Windows.Forms.CheckBox cb4;
-        private System.Windows.Forms.CheckBox cb5;
+        private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Button btnExit;
         public System.Windows.Forms.Label lblTimer;
+        public System.Windows.Forms.PictureBox PicBQuestions;
+        public System.Windows.Forms.CheckBox cbPop;
+        public System.Windows.Forms.CheckBox cbRock;
+        public System.Windows.Forms.CheckBox cbMetal;
+        public System.Windows.Forms.CheckBox cbCountry;
+        public System.Windows.Forms.CheckBox cbHipHop;
+        public System.Windows.Forms.Button btnLinkin;
+        public System.Windows.Forms.Button btnKaty;
+        public System.Windows.Forms.Button btnDoorsDown;
+        public System.Windows.Forms.Button btnHooba;
+        public System.Windows.Forms.Button btnDolly;
+        public System.Windows.Forms.Panel pnlGame;
+        public System.Windows.Forms.Label lblQuestion;
+        public System.Windows.Forms.PictureBox pbMnM;
+        public System.Windows.Forms.Label lblPlayer;
+        public System.Windows.Forms.Button btnNext;
     }
 }

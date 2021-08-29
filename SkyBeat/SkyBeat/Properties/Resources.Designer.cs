@@ -63,9 +63,49 @@ namespace SkyBeat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AwaySunLyrics {
+            get {
+                object obj = ResourceManager.GetObject("AwaySunLyrics", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BillyRayCyrus {
+            get {
+                object obj = ResourceManager.GetObject("BillyRayCyrus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Elvis_Presley {
             get {
                 object obj = ResourceManager.GetObject("Elvis Presley", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Eminem {
+            get {
+                object obj = ResourceManager.GetObject("Eminem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Eminem2 {
+            get {
+                object obj = ResourceManager.GetObject("Eminem2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,6 +133,26 @@ namespace SkyBeat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap JoleneLyrics {
+            get {
+                object obj = ResourceManager.GetObject("JoleneLyrics", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KatyPerry {
+            get {
+                object obj = ResourceManager.GetObject("KatyPerry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lock_Logo {
             get {
                 object obj = ResourceManager.GetObject("Lock Logo", resourceCulture);
@@ -113,6 +173,26 @@ namespace SkyBeat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap OutOfControlLyics {
+            get {
+                object obj = ResourceManager.GetObject("OutOfControlLyics", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RiseLyrics {
+            get {
+                object obj = ResourceManager.GetObject("RiseLyrics", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ShowPass {
             get {
                 object obj = ResourceManager.GetObject("ShowPass", resourceCulture);
@@ -123,9 +203,29 @@ namespace SkyBeat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SlipKnot {
+            get {
+                object obj = ResourceManager.GetObject("SlipKnot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Username_Logo {
             get {
                 object obj = ResourceManager.GetObject("Username Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WithYouLyrics {
+            get {
+                object obj = ResourceManager.GetObject("WithYouLyrics", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

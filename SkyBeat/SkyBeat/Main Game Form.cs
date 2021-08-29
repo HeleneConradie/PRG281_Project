@@ -11,12 +11,13 @@ using System.Threading;
 
 namespace SkyBeat
 {
-    public partial class frmMainGameForm : Form
+    public partial class frmMainGame : Form
     {
 
         public int StartTime = 60;
         public Thread thread1 = null;
-        public frmMainGameForm()
+
+        public frmMainGame()
         {
             InitializeComponent();
         }
@@ -33,12 +34,23 @@ namespace SkyBeat
         }
 
         public delegate void Time();
-
+        GameHandler gamehandler = new GameHandler();
         private void frmMainGameForm_Load(object sender, EventArgs e)
         {
             thread1 = new Thread(new ThreadStart(StartTiming));
             thread1.Start();
+            PicBQuestions.Show();
+            pbMnM.Hide();
+
+            gamehandler.ButtonHide();
+            gamehandler.CheckBoxHide();
+            if (gamehandler.QCount < 10)
+            {
+                gamehandler.ScoreCalculator();
+            }
+            
         }
+        
 
         public void StartTimer()
         {
@@ -64,6 +76,89 @@ namespace SkyBeat
                 Thread.Sleep(1000);
             }
             MessageBox.Show("Your time is up", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btnKaty_Click(object sender, EventArgs e)
+        {
+            if (gamehandler.QCount == 8)
+            {
+                gamehandler.Score++;
+            }
+        }
+
+        private void btnDoorsDown_Click(object sender, EventArgs e)
+        {
+            if (gamehandler.QCount == 7)
+            {
+                gamehandler.Score++;
+            }
+        }
+
+        private void btnHooba_Click(object sender, EventArgs e)
+        {
+            if (gamehandler.QCount == 9)
+            {
+                gamehandler.Score++;
+            }
+        }
+
+        private void btnDolly_Click(object sender, EventArgs e)
+        {
+            if (gamehandler.QCount == 6)
+            {
+                gamehandler.Score++;
+            }
+        }
+
+        private void btnLinkin_Click(object sender, EventArgs e)
+        {
+            if (gamehandler.QCount == 10)
+            {
+                gamehandler.Score++;
+            }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (gamehandler.QCount == 1)
+            {
+                if (cbRock.Checked && cbCountry.Checked)
+                {
+                    gamehandler.Score++;
+                }
+            }
+
+            else if (gamehandler.QCount == 2)
+            {
+                if (cbMetal.Checked)
+                {
+                    gamehandler.Score++;
+                }
+            }
+
+            else if (gamehandler.QCount == 3)
+            {
+                if (cbHipHop.Checked)
+                {
+                    gamehandler.Score++;
+                }
+            }
+
+            else if (gamehandler.QCount == 4)
+            {
+                if (cbCountry.Checked)
+                {
+                    gamehandler.Score++;
+                }
+            }
+
+            else if (gamehandler.QCount == 5)
+            {
+                if (cbPop.Checked && cbRock.Checked)
+                {
+                    gamehandler.Score++;
+                }
+            }
         }
     }
 }

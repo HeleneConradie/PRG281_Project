@@ -129,14 +129,12 @@ namespace SkyBeat
         public bool ValidationSignup()
         {
             Regex nums = new Regex("^[0-9]{13}");
-            Regex nums2 = new Regex("^[0-9]{2}");
             Regex strings = new Regex("^[A-Z][a-zA-Z]*$");
             Regex email = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             bool isValidName = strings.IsMatch(txtName.Text);
             bool isValidSurname = strings.IsMatch(txtSurname.Text);
             bool isValidemail = email.IsMatch(txtEmail.Text);
             bool isValidid = nums.IsMatch(txtID.Text);
-            bool isValidSecQues = strings.IsMatch(rtxtSecQuestion.Text);
             bool isValidSecAnswer = strings.IsMatch(txtSecAnswer.Text);
 
             if (txtName.Text == "" || txtSurname.Text == "" || txtID.Text == "" || txtEmail.Text == "" || cmbGender.Text == null
@@ -176,12 +174,6 @@ namespace SkyBeat
                 txtEmail.Focus();
                 return false;
             }
-            //if (!isValidSecQues)
-            //{
-            //MessageBox.Show("Please enter Security Question!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //rtxtSecQuestion.Focus();
-            // return false;
-            //}
             if (!isValidSecAnswer)
             {
                 MessageBox.Show("Please enter valid Security Answer!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

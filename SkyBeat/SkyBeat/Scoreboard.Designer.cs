@@ -38,12 +38,12 @@ namespace SkyBeat
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl3 = new System.Windows.Forms.Panel();
             this.lblCongratulations = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblWinnername = new System.Windows.Forms.Label();
+            this.lblWinnerscore = new System.Windows.Forms.Label();
+            this.lblWinnertime = new System.Windows.Forms.Label();
+            this.lblLosername = new System.Windows.Forms.Label();
+            this.lblLoserscore = new System.Windows.Forms.Label();
+            this.lblLosertime = new System.Windows.Forms.Label();
             this.lblWinner = new System.Windows.Forms.Label();
             this.btnPlayAgain = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -135,65 +135,65 @@ namespace SkyBeat
             this.lblCongratulations.TabIndex = 8;
             this.lblCongratulations.Text = "Congratulations!";
             // 
-            // label1
+            // lblWinnername
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 121);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 16);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Helene";
+            this.lblWinnername.AutoSize = true;
+            this.lblWinnername.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWinnername.Location = new System.Drawing.Point(49, 121);
+            this.lblWinnername.Name = "lblWinnername";
+            this.lblWinnername.Size = new System.Drawing.Size(49, 16);
+            this.lblWinnername.TabIndex = 9;
+            this.lblWinnername.Text = "Helene";
             // 
-            // label2
+            // lblWinnerscore
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(174, 121);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 16);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "9/10";
+            this.lblWinnerscore.AutoSize = true;
+            this.lblWinnerscore.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWinnerscore.Location = new System.Drawing.Point(174, 121);
+            this.lblWinnerscore.Name = "lblWinnerscore";
+            this.lblWinnerscore.Size = new System.Drawing.Size(31, 16);
+            this.lblWinnerscore.TabIndex = 10;
+            this.lblWinnerscore.Text = "9/10";
             // 
-            // label3
+            // lblWinnertime
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(279, 121);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 16);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "25 s";
+            this.lblWinnertime.AutoSize = true;
+            this.lblWinnertime.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWinnertime.Location = new System.Drawing.Point(279, 121);
+            this.lblWinnertime.Name = "lblWinnertime";
+            this.lblWinnertime.Size = new System.Drawing.Size(32, 16);
+            this.lblWinnertime.TabIndex = 11;
+            this.lblWinnertime.Text = "25 s";
             // 
-            // label4
+            // lblLosername
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(49, 161);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Henco";
+            this.lblLosername.AutoSize = true;
+            this.lblLosername.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLosername.Location = new System.Drawing.Point(49, 161);
+            this.lblLosername.Name = "lblLosername";
+            this.lblLosername.Size = new System.Drawing.Size(44, 16);
+            this.lblLosername.TabIndex = 12;
+            this.lblLosername.Text = "Henco";
             // 
-            // label5
+            // lblLoserscore
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(174, 161);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 16);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "7/10";
+            this.lblLoserscore.AutoSize = true;
+            this.lblLoserscore.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoserscore.Location = new System.Drawing.Point(174, 161);
+            this.lblLoserscore.Name = "lblLoserscore";
+            this.lblLoserscore.Size = new System.Drawing.Size(31, 16);
+            this.lblLoserscore.TabIndex = 13;
+            this.lblLoserscore.Text = "7/10";
             // 
-            // label6
+            // lblLosertime
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(279, 161);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 16);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "34 s";
+            this.lblLosertime.AutoSize = true;
+            this.lblLosertime.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLosertime.Location = new System.Drawing.Point(279, 161);
+            this.lblLosertime.Name = "lblLosertime";
+            this.lblLosertime.Size = new System.Drawing.Size(32, 16);
+            this.lblLosertime.TabIndex = 14;
+            this.lblLosertime.Text = "34 s";
             // 
             // lblWinner
             // 
@@ -252,12 +252,12 @@ namespace SkyBeat
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnPlayAgain);
             this.Controls.Add(this.lblWinner);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblLosertime);
+            this.Controls.Add(this.lblLoserscore);
+            this.Controls.Add(this.lblLosername);
+            this.Controls.Add(this.lblWinnertime);
+            this.Controls.Add(this.lblWinnerscore);
+            this.Controls.Add(this.lblWinnername);
             this.Controls.Add(this.lblCongratulations);
             this.Controls.Add(this.pnl3);
             this.Controls.Add(this.pictureBox1);
@@ -272,6 +272,7 @@ namespace SkyBeat
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scoreboard";
+            this.Load += new System.EventHandler(this.frmScoreboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -289,12 +290,12 @@ namespace SkyBeat
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnl3;
         private System.Windows.Forms.Label lblCongratulations;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblWinnername;
+        private System.Windows.Forms.Label lblWinnerscore;
+        private System.Windows.Forms.Label lblWinnertime;
+        private System.Windows.Forms.Label lblLosername;
+        private System.Windows.Forms.Label lblLoserscore;
+        private System.Windows.Forms.Label lblLosertime;
         private System.Windows.Forms.Label lblWinner;
         private System.Windows.Forms.Button btnPlayAgain;
         private System.Windows.Forms.Button btnExit;

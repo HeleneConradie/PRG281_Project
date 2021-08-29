@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameHandler.cs" />
+    <Compile Include="IFinishMessage.cs" />
+    <Compile Include="IScoreBoard.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +158,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Elvis Presley.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SlipKnot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eminem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eminem2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BillyRayCyrus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KatyPerry.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AwaySunLyrics.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JoleneLyrics.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OutOfControlLyics.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RiseLyrics.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WithYouLyrics.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
