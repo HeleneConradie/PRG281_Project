@@ -38,7 +38,7 @@ namespace SkyBeat
             this.Hide();
             frmStart playagain = new frmStart();
             playagain.Show();
-            GameHandler maing = new GameHandler();
+            frmMainGame maing = new frmMainGame();
             maing.ReceiveMode(player1, player2, mode);
         }
 
@@ -101,6 +101,7 @@ namespace SkyBeat
 
             cmd.CommandText = "INSERT INTO UserHistory(UserID, Score, Time, WinOrLose)" +
                 "VALUES ('" + userid + "','" + lblWinnerscore + "','" + lblWinnertime + "','" + win + "')";
+
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "SELECT UserID FROM UserLogin WHERE Username = '" + lblLosername + "'";

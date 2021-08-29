@@ -59,7 +59,7 @@ namespace SkyBeat
             // 
             this.cbPop.AutoSize = true;
             this.cbPop.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbPop.Location = new System.Drawing.Point(364, 33);
+            this.cbPop.Location = new System.Drawing.Point(381, 28);
             this.cbPop.Name = "cbPop";
             this.cbPop.Size = new System.Drawing.Size(55, 23);
             this.cbPop.TabIndex = 1;
@@ -90,7 +90,7 @@ namespace SkyBeat
             // 
             this.cbRock.AutoSize = true;
             this.cbRock.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbRock.Location = new System.Drawing.Point(364, 71);
+            this.cbRock.Location = new System.Drawing.Point(381, 66);
             this.cbRock.Name = "cbRock";
             this.cbRock.Size = new System.Drawing.Size(63, 23);
             this.cbRock.TabIndex = 5;
@@ -101,7 +101,7 @@ namespace SkyBeat
             // 
             this.cbMetal.AutoSize = true;
             this.cbMetal.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMetal.Location = new System.Drawing.Point(364, 109);
+            this.cbMetal.Location = new System.Drawing.Point(381, 104);
             this.cbMetal.Name = "cbMetal";
             this.cbMetal.Size = new System.Drawing.Size(68, 23);
             this.cbMetal.TabIndex = 6;
@@ -112,7 +112,7 @@ namespace SkyBeat
             // 
             this.cbCountry.AutoSize = true;
             this.cbCountry.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCountry.Location = new System.Drawing.Point(364, 147);
+            this.cbCountry.Location = new System.Drawing.Point(381, 142);
             this.cbCountry.Name = "cbCountry";
             this.cbCountry.Size = new System.Drawing.Size(85, 23);
             this.cbCountry.TabIndex = 7;
@@ -123,7 +123,7 @@ namespace SkyBeat
             // 
             this.cbHipHop.AutoSize = true;
             this.cbHipHop.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbHipHop.Location = new System.Drawing.Point(364, 185);
+            this.cbHipHop.Location = new System.Drawing.Point(381, 180);
             this.cbHipHop.Name = "cbHipHop";
             this.cbHipHop.Size = new System.Drawing.Size(85, 23);
             this.cbHipHop.TabIndex = 8;
@@ -144,6 +144,8 @@ namespace SkyBeat
             // 
             // pnlGame
             // 
+            this.pnlGame.Controls.Add(this.lblPlayer);
+            this.pnlGame.Controls.Add(this.btnNext);
             this.pnlGame.Controls.Add(this.cbHipHop);
             this.pnlGame.Controls.Add(this.cbCountry);
             this.pnlGame.Controls.Add(this.cbMetal);
@@ -185,7 +187,7 @@ namespace SkyBeat
             // 
             // btnLinkin
             // 
-            this.btnLinkin.Location = new System.Drawing.Point(353, 185);
+            this.btnLinkin.Location = new System.Drawing.Point(370, 180);
             this.btnLinkin.Name = "btnLinkin";
             this.btnLinkin.Size = new System.Drawing.Size(98, 23);
             this.btnLinkin.TabIndex = 11;
@@ -195,17 +197,16 @@ namespace SkyBeat
             // 
             // PicBQuestions
             // 
-            this.PicBQuestions.Image = global::SkyBeat.Properties.Resources.Elvis_Presley;
-            this.PicBQuestions.Location = new System.Drawing.Point(0, 58);
+            this.PicBQuestions.Location = new System.Drawing.Point(6, 34);
             this.PicBQuestions.Name = "PicBQuestions";
-            this.PicBQuestions.Size = new System.Drawing.Size(200, 150);
+            this.PicBQuestions.Size = new System.Drawing.Size(190, 154);
             this.PicBQuestions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PicBQuestions.TabIndex = 0;
             this.PicBQuestions.TabStop = false;
             // 
             // btnKaty
             // 
-            this.btnKaty.Location = new System.Drawing.Point(350, 34);
+            this.btnKaty.Location = new System.Drawing.Point(367, 29);
             this.btnKaty.Name = "btnKaty";
             this.btnKaty.Size = new System.Drawing.Size(98, 23);
             this.btnKaty.TabIndex = 13;
@@ -215,7 +216,7 @@ namespace SkyBeat
             // 
             // btnDoorsDown
             // 
-            this.btnDoorsDown.Location = new System.Drawing.Point(350, 71);
+            this.btnDoorsDown.Location = new System.Drawing.Point(367, 66);
             this.btnDoorsDown.Name = "btnDoorsDown";
             this.btnDoorsDown.Size = new System.Drawing.Size(101, 23);
             this.btnDoorsDown.TabIndex = 14;
@@ -225,7 +226,7 @@ namespace SkyBeat
             // 
             // btnHooba
             // 
-            this.btnHooba.Location = new System.Drawing.Point(350, 110);
+            this.btnHooba.Location = new System.Drawing.Point(367, 105);
             this.btnHooba.Name = "btnHooba";
             this.btnHooba.Size = new System.Drawing.Size(98, 23);
             this.btnHooba.TabIndex = 12;
@@ -235,7 +236,7 @@ namespace SkyBeat
             // 
             // btnDolly
             // 
-            this.btnDolly.Location = new System.Drawing.Point(350, 147);
+            this.btnDolly.Location = new System.Drawing.Point(367, 142);
             this.btnDolly.Name = "btnDolly";
             this.btnDolly.Size = new System.Drawing.Size(101, 23);
             this.btnDolly.TabIndex = 0;
@@ -246,7 +247,7 @@ namespace SkyBeat
             // pbLogo
             // 
             this.pbLogo.Image = global::SkyBeat.Properties.Resources.Music_Notes;
-            this.pbLogo.Location = new System.Drawing.Point(189, 194);
+            this.pbLogo.Location = new System.Drawing.Point(176, 133);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(243, 165);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -257,7 +258,7 @@ namespace SkyBeat
             // 
             this.lblPlayer.AutoSize = true;
             this.lblPlayer.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayer.Location = new System.Drawing.Point(18, 50);
+            this.lblPlayer.Location = new System.Drawing.Point(245, 4);
             this.lblPlayer.Name = "lblPlayer";
             this.lblPlayer.Size = new System.Drawing.Size(41, 15);
             this.lblPlayer.TabIndex = 11;
@@ -267,7 +268,7 @@ namespace SkyBeat
             // 
             this.btnNext.BackColor = System.Drawing.Color.White;
             this.btnNext.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.Location = new System.Drawing.Point(472, 292);
+            this.btnNext.Location = new System.Drawing.Point(381, 254);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(100, 30);
             this.btnNext.TabIndex = 12;
@@ -282,8 +283,6 @@ namespace SkyBeat
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(584, 411);
             this.ControlBox = false;
-            this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.lblPlayer);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.lblMainGameHeading1);

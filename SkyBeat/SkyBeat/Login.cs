@@ -121,8 +121,9 @@ namespace SkyBeat
                     {
                         this.Hide();
                         frmStart strt = new frmStart();
-                        GameHandler gamehandler = new GameHandler();
-                        gamehandler.ReceiveMode(loginCompare[0], loginCompare[1], ModeNumber);
+                        frmMainGame main = new frmMainGame();
+                        main.ReceiveMode(loginCompare[0], loginCompare[1], ModeNumber);
+                        strt.Show();
                     }
                 }
                 connection.Close();

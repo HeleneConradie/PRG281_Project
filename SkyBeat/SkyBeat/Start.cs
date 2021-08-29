@@ -24,8 +24,16 @@ namespace SkyBeat
 
             this.Hide();
             frmMainGame game = new frmMainGame();
-            game.Show();
             
+            game.StartTime = 60;
+            game.PicBQuestions.Show();
+            game.pbMnM.Hide();
+            game.ButtonHide();
+            game.CheckBoxHide();
+            game.Score = 0;
+            game.QCount = 0;
+            game.Show();
+
         }
 
         private void btnMainMenu_Click(object sender, EventArgs e)

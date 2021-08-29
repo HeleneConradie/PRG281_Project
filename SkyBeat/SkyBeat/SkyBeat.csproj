@@ -47,7 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GameHandler.cs" />
     <Compile Include="IFinishMessage.cs" />
     <Compile Include="IScoreBoard.cs" />
     <Compile Include="Login.cs">
