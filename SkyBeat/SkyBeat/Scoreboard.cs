@@ -64,9 +64,8 @@ namespace SkyBeat
 
         private void btnPlayAgain_Click(object sender, EventArgs e)
         {
-            frmStart playagain = new frmStart();
-            playagain.Show();
             frmMainGame maing = new frmMainGame();
+            maing.Start();
             maing.ReceiveMode(player1, player2, mode);
             this.Hide();
         }

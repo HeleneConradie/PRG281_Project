@@ -22,7 +22,6 @@ namespace SkyBeat
         SqlConnection connection;
         SqlCommand cmd;
         SqlDataReader dr;
-        frmStart strt = new frmStart();
         frmMainGame main = new frmMainGame();
         frmMain mainmenu = new frmMain();
 
@@ -125,7 +124,7 @@ namespace SkyBeat
                     {
                         this.Hide();
                         main.ReceiveMode(loginCompare[0], loginCompare[1], ModeNumber);
-                        strt.Show();
+                        main.Show();
                     }
                 }
                 connection.Close();

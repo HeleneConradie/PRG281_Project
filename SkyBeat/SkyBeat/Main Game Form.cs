@@ -27,13 +27,16 @@ namespace SkyBeat
         public int score2;
         public int time1;
         public int time2;
-        public int[] Questions = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        public int[] Questions = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         public int Count = 0;
         string correctanswer = "";
 
         public frmMainGame()
         {
             InitializeComponent();
+            pnlGame.Show();
+            lblTimer.Hide();
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -51,8 +54,6 @@ namespace SkyBeat
         public delegate void Time();
         private void frmMainGameForm_Load(object sender, EventArgs e)
         {
-            thread1 = new Thread(new ThreadStart(StartTiming));
-            thread1.Start();
 
             while (Count < 10)
             {
@@ -92,11 +93,10 @@ namespace SkyBeat
             }
         }
 
-        frmStart start = new frmStart();
         frmScoreboard screb = new frmScoreboard();
         public void ScoreCalculator()
         {
-                switch (Questions[QCount])
+            switch (Questions[QCount])
                 {
                     case 1:
                         PicBQuestions.Image = Properties.Resources.Elvis_Presley;
@@ -193,11 +193,10 @@ namespace SkyBeat
                         ButtonShow();
                         btnNext.Hide();
                         break;
-                }
-            
+            }
             QCount++;
 
-            if (QCount == 11)
+            if (QCount == 10)
             {
                 if (modeNum == 1)
                 {
@@ -215,7 +214,7 @@ namespace SkyBeat
                     score1 = Score;
                     QuestionNumber = 0;
                     Score = 0;
-                    start.Show();
+                    Start();
                     lblPlayer.Show();
                     lblPlayer.Text = "Player 2";
                     thread1.Abort();
@@ -282,6 +281,11 @@ namespace SkyBeat
             
         }
         frmMain mainmenu = new frmMain();
+
+        public void Start()
+        {
+            pnlStartButton.Show();
+        }
 
         private void UncheckCheckboxes()
         {
@@ -420,8 +424,34 @@ namespace SkyBeat
                     Score++;
                 }
             }
-
             ScoreCalculator();
+        }
+
+        private void btnMainMenu_Click(object sender, EventArgs e)
+        {
+            DialogResult mainmenu = MessageBox.Show("Are you sure you want to return to the Main Menu?", "Are you sure?"
+               , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (mainmenu == DialogResult.Yes)
+            {
+                this.Hide();
+                frmMain MainMenu = new frmMain();
+                MainMenu.Show();
+            }
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            thread1 = new Thread(new ThreadStart(StartTiming));
+            thread1.Start();
+
+            pnlStartButton.Hide();
+            StartTime = 60;
+            PicBQuestions.Show();
+            pbMnM.Hide();
+            Score = 0;
+            QCount = 0;
+            lblTimer.Show();
+            
         }
     }
 }

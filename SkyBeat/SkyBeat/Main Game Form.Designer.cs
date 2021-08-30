@@ -49,10 +49,15 @@ namespace SkyBeat
             this.btnHooba = new System.Windows.Forms.Button();
             this.btnDolly = new System.Windows.Forms.Button();
             this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.pnlStartButton = new System.Windows.Forms.Panel();
+            this.lblReady2 = new System.Windows.Forms.Label();
+            this.btnMainMenu = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
             this.pnlGame.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMnM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBQuestions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            this.pnlStartButton.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbPop
@@ -276,6 +281,48 @@ namespace SkyBeat
             this.pbLogo.TabIndex = 3;
             this.pbLogo.TabStop = false;
             // 
+            // pnlStartButton
+            // 
+            this.pnlStartButton.Controls.Add(this.lblReady2);
+            this.pnlStartButton.Controls.Add(this.btnMainMenu);
+            this.pnlStartButton.Controls.Add(this.btnStart);
+            this.pnlStartButton.Location = new System.Drawing.Point(12, 72);
+            this.pnlStartButton.Name = "pnlStartButton";
+            this.pnlStartButton.Size = new System.Drawing.Size(484, 301);
+            this.pnlStartButton.TabIndex = 17;
+            // 
+            // lblReady2
+            // 
+            this.lblReady2.AutoSize = true;
+            this.lblReady2.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReady2.Location = new System.Drawing.Point(171, 19);
+            this.lblReady2.Name = "lblReady2";
+            this.lblReady2.Size = new System.Drawing.Size(157, 25);
+            this.lblReady2.TabIndex = 5;
+            this.lblReady2.Text = "Are You Ready?";
+            // 
+            // btnMainMenu
+            // 
+            this.btnMainMenu.Font = new System.Drawing.Font("Perpetua Titling MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMainMenu.Location = new System.Drawing.Point(176, 167);
+            this.btnMainMenu.Name = "btnMainMenu";
+            this.btnMainMenu.Size = new System.Drawing.Size(146, 44);
+            this.btnMainMenu.TabIndex = 1;
+            this.btnMainMenu.Text = "MAIN MENU";
+            this.btnMainMenu.UseVisualStyleBackColor = true;
+            this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
+            // 
+            // btnStart
+            // 
+            this.btnStart.Font = new System.Drawing.Font("Perpetua Titling MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Location = new System.Drawing.Point(176, 83);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(146, 44);
+            this.btnStart.TabIndex = 0;
+            this.btnStart.Text = "START";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
             // frmMainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,6 +330,7 @@ namespace SkyBeat
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(584, 411);
             this.ControlBox = false;
+            this.Controls.Add(this.pnlStartButton);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.lblMainGameHeading1);
@@ -300,6 +348,8 @@ namespace SkyBeat
             ((System.ComponentModel.ISupportInitialize)(this.pbMnM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBQuestions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            this.pnlStartButton.ResumeLayout(false);
+            this.pnlStartButton.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,5 +376,9 @@ namespace SkyBeat
         public System.Windows.Forms.PictureBox pbMnM;
         public System.Windows.Forms.Label lblPlayer;
         public System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Panel pnlStartButton;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnMainMenu;
+        public System.Windows.Forms.Label lblReady2;
     }
 }

@@ -140,7 +140,7 @@ namespace SkyBeat
             // 
             this.lblWinnername.AutoSize = true;
             this.lblWinnername.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWinnername.Location = new System.Drawing.Point(49, 121);
+            this.lblWinnername.Location = new System.Drawing.Point(25, 121);
             this.lblWinnername.Name = "lblWinnername";
             this.lblWinnername.Size = new System.Drawing.Size(49, 16);
             this.lblWinnername.TabIndex = 9;
@@ -170,7 +170,7 @@ namespace SkyBeat
             // 
             this.lblLosername.AutoSize = true;
             this.lblLosername.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLosername.Location = new System.Drawing.Point(49, 161);
+            this.lblLosername.Location = new System.Drawing.Point(25, 161);
             this.lblLosername.Name = "lblLosername";
             this.lblLosername.Size = new System.Drawing.Size(44, 16);
             this.lblLosername.TabIndex = 12;

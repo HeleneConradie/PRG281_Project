@@ -86,12 +86,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Start.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Start.Designer.cs">
-      <DependentUpon>Start.cs</DependentUpon>
-    </Compile>
     <Compile Include="Terms and Conditions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,9 +111,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sign Up.resx">
       <DependentUpon>Sign Up.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Start.resx">
-      <DependentUpon>Start.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Terms and Conditions.resx">
       <DependentUpon>Terms and Conditions.cs</DependentUpon>
