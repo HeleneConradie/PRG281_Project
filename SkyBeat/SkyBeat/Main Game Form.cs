@@ -218,6 +218,7 @@ namespace SkyBeat
                     lblPlayer.Show();
                     lblPlayer.Text = "Player 2";
                     thread1.Abort();
+                    lblTimer.Hide();
 
                 }
                 else
@@ -239,6 +240,7 @@ namespace SkyBeat
                             screb.Multiplayer(player2, score2, time2, player1, score1, time1, player1, player2);
                         }
                     }
+                    else
                     {
                         screb.Multiplayer(player2, score2, time2, player1, score1, time1, player1, player2);
                     }

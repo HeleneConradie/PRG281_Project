@@ -37,11 +37,11 @@ namespace SkyBeat
             lblWinnername.Text = winner;
             lblWinnername.ForeColor = Color.Yellow;
             lblWinnerscore.Text = winnerscore.ToString() + "/10";
-            lblWinnertime.Text = winnertime.ToString() + " s";
+            lblWinnertime.Text = winnertime.ToString() + "s";
             lblLosername.Text = loser;
             lblLosername.ForeColor = Color.Red;
             lblLoserscore.Text = loserscore.ToString() + "/10";
-            lblLosertime.Text = losertime.ToString() + " s";
+            lblLosertime.Text = losertime.ToString() + "s";
             lblWinner.Show();
             lblWinner.Text = winner + " Wins!";
         }
@@ -65,7 +65,7 @@ namespace SkyBeat
         private void btnPlayAgain_Click(object sender, EventArgs e)
         {
             frmMainGame maing = new frmMainGame();
-            maing.Start();
+            maing.Show();
             maing.ReceiveMode(player1, player2, mode);
             this.Hide();
         }
@@ -94,38 +94,72 @@ namespace SkyBeat
             cmd = new SqlCommand();
             connection.Open();
             cmd.Connection = connection;
-            cmd.CommandText = "SELECT UserID FROM UserLogin WHERE Username = '" + lblWinnername.Text + "'";
-            SqlDataReader reader = cmd.ExecuteReader();
-            if (reader.HasRows)
+
+            if (mode == 1)
             {
-                while (reader.Read())
+                cmd.CommandText = "SELECT UserID FROM UserLogin WHERE Username = '" + lblWinnername.Text + "'";
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
                 {
-                    userid = reader[0].ToString();
+                    while (reader.Read())
+                    {
+                        userid = reader[0].ToString();
+                    }
                 }
+                reader.Close();
+
+                int wintime = int.Parse(lblWinnertime.Text.Remove(lblWinnertime.Text.Length - 1, 1));
+                int winscore = int.Parse(lblWinnerscore.Text.Remove(lblWinnerscore.Text.Length - 3, 3));
+                cmd.CommandText = "INSERT INTO UserHistory(UserID, Score, Time, WinOrLose)" +
+                    "VALUES ('" + int.Parse(userid) + "','" + winscore + "','" + wintime + "','" + win + "')";
+                cmd.ExecuteNonQuery();
+
+                connection.Close();
+
+                MessageBox.Show("Save was successful!", "Save Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            reader.Close();
-
-            cmd.CommandText = "INSERT INTO UserHistory(UserID, Score, Time, WinOrLose)" +
-                "VALUES ('" + userid + "','" + lblWinnerscore.Text + "','" + lblWinnertime.Text + "','" + win + "')";
-
-            cmd.ExecuteNonQuery();
-
-            cmd.CommandText = "SELECT UserID FROM UserLogin WHERE Username = '" + lblLosername.Text + "'";
-            reader = cmd.ExecuteReader();
-            if (reader.HasRows)
+            else if(mode == 2)
             {
-                while (reader.Read())
+                cmd.CommandText = "SELECT UserID FROM UserLogin WHERE Username = '" + lblWinnername.Text + "'";
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
                 {
-                    userid2 = reader[0].ToString();
+                    while (reader.Read())
+                    {
+                        userid = reader[0].ToString();
+                    }
                 }
+                reader.Close();
+
+                int wintime = int.Parse(lblWinnertime.Text.Remove(lblWinnertime.Text.Length - 1, 1));
+                int winscore = int.Parse(lblWinnerscore.Text.Remove(lblWinnerscore.Text.Length - 3, 3));
+                cmd.CommandText = "INSERT INTO UserHistory(UserID, Score, Time, WinOrLose)" +
+                    "VALUES ('" + int.Parse(userid) + "','" + winscore + "','" + wintime + "','" + win + "')";
+                cmd.ExecuteNonQuery();
+
+                cmd.CommandText = "SELECT UserID FROM UserLogin WHERE Username = '" + lblLosername.Text + "'";
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        userid2 = reader[0].ToString();
+                    }
+                }
+                reader.Close();
+
+                int losetime = int.Parse(lblLosertime.Text.Remove(lblLosertime.Text.Length - 1, 1));
+                int losescore = int.Parse(lblLoserscore.Text.Remove(lblLoserscore.Text.Length - 3, 3));
+                cmd.CommandText = "INSERT INTO UserHistory(UserID, Score, Time, WinOrLose)" +
+                    "VALUES ('" + int.Parse(userid2) + "','" + losescore + "','" + losetime + "','" + lose + "')";
+
+                cmd.ExecuteNonQuery();
+
+                connection.Close();
+
+                MessageBox.Show("Save was successful!", "Save Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            reader.Close();
-
-            cmd.CommandText = "INSERT INTO UserHistory(UserID, Score, Time, WinOrLose)" +
-                "VALUES ('" + userid2 + "','" + lblLoserscore.Text + "','" + lblLosertime.Text + "','" + lose + "')";
-            cmd.ExecuteNonQuery();
-
-            connection.Close();
+            
         }
     }
 }
