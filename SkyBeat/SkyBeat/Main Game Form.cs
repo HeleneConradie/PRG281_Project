@@ -27,7 +27,7 @@ namespace SkyBeat
         public int score2;
         public int time1;
         public int time2;
-        public int[] Questions = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        public int[] Questions = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         public int Count = 0;
         string correctanswer = "";
 
@@ -196,7 +196,8 @@ namespace SkyBeat
                 }
             
             QCount++;
-            if (QCount == 10)
+
+            if (QCount == 11)
             {
                 if (modeNum == 1)
                 {
