@@ -89,6 +89,7 @@ namespace SkyBeat
                 }
                 else
                 {
+                    
                     loginCompare[1] = Username;
                 }
                 bool success = ValidationLogin();
@@ -99,9 +100,9 @@ namespace SkyBeat
                 dr = cmd.ExecuteReader();
                 if (success == true)
                 {
+                    loginCount++;
                     if (dr.Read())
                     {
-                        loginCount++;
                         if (ModeNumber == 2)
                         {
                             lblPlayer.Text = "Player 2";

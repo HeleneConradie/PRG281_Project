@@ -13,9 +13,38 @@ namespace SkyBeat
 {
     public partial class frmScoreboard : Form, IScoreBoard
     {
-        public string player1 = "";
-        public string player2 = "";
+        public string player1;
+        public string player2;
         public int mode;
+        public void SinglePlayer(string user, int score, int time)
+        {
+            mode = 1;
+            player1 = user;
+            lblWinnername.Text = user;
+            lblWinnerscore.Text = score.ToString() + "/10";
+            lblWinnertime.Text = time.ToString() + " s";
+            lblLosername.Hide();
+            lblLoserscore.Hide();
+            lblLosertime.Hide();
+            lblWinner.Hide();
+        }
+
+        public void Multiplayer(string winner, int winnerscore, int winnertime, string loser, int loserscore, int losertime, string pone, string ptwo)
+        {
+            mode = 2;
+            player1 = pone;
+            player2 = ptwo;
+            lblWinnername.Text = winner;
+            lblWinnername.ForeColor = Color.Yellow;
+            lblWinnerscore.Text = winnerscore.ToString() + "/10";
+            lblWinnertime.Text = winnertime.ToString() + " s";
+            lblLosername.Text = loser;
+            lblLosername.ForeColor = Color.Red;
+            lblLoserscore.Text = loserscore.ToString() + "/10";
+            lblLosertime.Text = losertime.ToString() + " s";
+            lblWinner.Show();
+            lblWinner.Text = winner + " Wins!";
+        }
 
         public frmScoreboard()
         {
@@ -35,11 +64,11 @@ namespace SkyBeat
 
         private void btnPlayAgain_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmStart playagain = new frmStart();
             playagain.Show();
             frmMainGame maing = new frmMainGame();
             maing.ReceiveMode(player1, player2, mode);
+            this.Hide();
         }
 
         private void btnMainMenu_Click(object sender, EventArgs e)
@@ -47,33 +76,6 @@ namespace SkyBeat
             this.Hide();
             frmMain mainmenu = new frmMain();
             mainmenu.Show();
-        }
-
-        public void SinglePlayer(string user, int score, int time)
-        {
-            mode = 1;
-            player1 = user;
-            lblWinnername.Text = user;
-            lblWinnerscore.Text = score.ToString()+ "/10";
-            lblWinnertime.Text = time.ToString() + " s";
-            lblLosername.Hide();
-            lblLoserscore.Hide();
-            lblLosertime.Hide();
-            lblWinner.Hide();
-        }
-
-        public void Multiplayer(string winner, int winnerscore, int winnertime, string loser, int loserscore, int losertime, string pone, string ptwo)
-        {
-            mode = 2;
-            player1 = pone;
-            player2 = ptwo;
-            lblWinnername.Text = winner;
-            lblWinnerscore.Text = winnerscore.ToString() + "/10";
-            lblWinnertime.Text = winnertime.ToString() + " s";
-            lblLosername.Text = loser;
-            lblLoserscore.Text = loserscore.ToString() + "/10";
-            lblLosertime.Text = losertime.ToString() + " s";
-            lblWinner.Text = winner + " Wins!";
         }
 
         SqlConnection connection;
@@ -93,7 +95,7 @@ namespace SkyBeat
             cmd = new SqlCommand();
             connection.Open();
             cmd.Connection = connection;
-            cmd.CommandText = "SELECT UserID FROM UserLogin WHERE Username = '" + lblWinnername + "'";
+            cmd.CommandText = "SELECT UserID FROM UserLogin WHERE Username = '" + lblWinnername.Text + "'";
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
             {
@@ -105,11 +107,11 @@ namespace SkyBeat
             reader.Close();
 
             cmd.CommandText = "INSERT INTO UserHistory(UserID, Score, Time, WinOrLose)" +
-                "VALUES ('" + userid + "','" + lblWinnerscore + "','" + lblWinnertime + "','" + win + "')";
+                "VALUES ('" + userid + "','" + lblWinnerscore.Text + "','" + lblWinnertime.Text + "','" + win + "')";
 
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = "SELECT UserID FROM UserLogin WHERE Username = '" + lblLosername + "'";
+            cmd.CommandText = "SELECT UserID FROM UserLogin WHERE Username = '" + lblLosername.Text + "'";
             reader = cmd.ExecuteReader();
             if (reader.HasRows)
             {
@@ -121,7 +123,7 @@ namespace SkyBeat
             reader.Close();
 
             cmd.CommandText = "INSERT INTO UserHistory(UserID, Score, Time, WinOrLose)" +
-                "VALUES ('" + userid2 + "','" + lblLoserscore + "','" + lblLosertime + "','" + lose + "')";
+                "VALUES ('" + userid2 + "','" + lblLoserscore.Text + "','" + lblLosertime.Text + "','" + lose + "')";
             cmd.ExecuteNonQuery();
 
             connection.Close();

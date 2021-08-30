@@ -27,9 +27,7 @@ namespace SkyBeat
         public int score2;
         public int time1;
         public int time2;
-        public string UserChoice = "";
         public int[] Questions = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        //public int[] Questions = { 9, 1, 5, 7, 3, 8, 6, 2, 10, 4 };
         public int Count = 0;
         string correctanswer = "";
 
@@ -55,14 +53,26 @@ namespace SkyBeat
         {
             thread1 = new Thread(new ThreadStart(StartTiming));
             thread1.Start();
+
+            while (Count < 10)
+            {
+                Random rd = new Random();
+                int rand_num = rd.Next(1, 11);
+                var result = Array.Find(Questions, element => element == rand_num);
+                if (result == 0)
+                {
+                    int Pos = Count;
+                    Questions[Pos] = rand_num;
+                    Count++;
+                }
+                result = 0;
+            }
             ScoreCalculator();
         }
 
         public delegate void Delegate1();
         public event Delegate1 MessageEvent;
 
-        frmStart start = new frmStart();
-        frmScoreboard screb = new frmScoreboard();
         Random rnd = new Random();
         string genre = "What Genre does the artist belong to?";
         string lyrics = "Who sings the song that the lyrics belongs to?";
@@ -74,7 +84,7 @@ namespace SkyBeat
             this.player2 = two;
             if (modeNum == 1)
             {
-                lblPlayer.Text = " ";
+                lblPlayer.Text = "";
             }
             else
             {
@@ -82,21 +92,10 @@ namespace SkyBeat
             }
         }
 
+        frmStart start = new frmStart();
+        frmScoreboard screb = new frmScoreboard();
         public void ScoreCalculator()
         {
-            while (Count < 10)
-            {
-                Random rd = new Random();
-                int rand_num = rd.Next(0, 11);
-                var result = Array.Find(Questions, element => element == rand_num);
-                if (result == 0)
-                {
-                    int Pos = Count;
-                    Questions[Pos] = rand_num;
-                    Count++;
-                }
-                result = 0;
-            }
                 switch (Questions[QCount])
                 {
                     case 1:
@@ -206,6 +205,7 @@ namespace SkyBeat
                     score1 = Score;
                     screb.Show();
                     screb.SinglePlayer(player1, score1, timefinish);
+                    lblPlayer.Hide();
                     this.Hide();
                 }
                 else if ((modeNum == 2) && (lblPlayer.Text == "Player 1"))
@@ -218,6 +218,7 @@ namespace SkyBeat
                     lblPlayer.Show();
                     lblPlayer.Text = "Player 2";
                     thread1.Abort();
+
                 }
                 else
                 {
@@ -243,8 +244,8 @@ namespace SkyBeat
                     }
 
                     thread1.Abort();
-                    this.Hide();
                     screb.Show();
+                    this.Hide();
                 }
                 MessageEvent += Message;
                 MessageEvent();
@@ -277,7 +278,9 @@ namespace SkyBeat
                 Thread.Sleep(1000);
             }
             MessageBox.Show("Your time is up", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
         }
+        frmMain mainmenu = new frmMain();
 
         private void UncheckCheckboxes()
         {
@@ -335,7 +338,6 @@ namespace SkyBeat
             if (correctanswer == "Rise")
             {
                 Score++;
-                MessageBox.Show("Correct");
             }
             ScoreCalculator();
         }
@@ -345,7 +347,6 @@ namespace SkyBeat
             if (correctanswer == "AFTS")
             {
                 Score++;
-                MessageBox.Show("Correct");
             }
             ScoreCalculator();
         }
@@ -355,7 +356,6 @@ namespace SkyBeat
             if (correctanswer == "OOC")
             {
                 Score++;
-                MessageBox.Show("Correct");
             }
             ScoreCalculator();
         }
@@ -365,7 +365,6 @@ namespace SkyBeat
             if (correctanswer == "Jolene")
             {
                 Score++;
-                MessageBox.Show("Correct");
             }
             ScoreCalculator();
         }
@@ -375,7 +374,6 @@ namespace SkyBeat
             if (correctanswer == "WithYou")
             {
                 Score++;
-                MessageBox.Show("Correct");
             }
             ScoreCalculator();
         }
@@ -387,7 +385,6 @@ namespace SkyBeat
                 if (cbRock.Checked && cbCountry.Checked)
                 {
                     Score++;
-                    MessageBox.Show("Correct");
                 }
             }
 
@@ -396,7 +393,6 @@ namespace SkyBeat
                 if (cbMetal.Checked)
                 {
                     Score++;
-                    MessageBox.Show("Correct");
                 }
             }
 
@@ -405,7 +401,6 @@ namespace SkyBeat
                 if (cbHipHop.Checked)
                 {
                     Score++;
-                    MessageBox.Show("Correct");
                 }
             }
 
@@ -414,7 +409,6 @@ namespace SkyBeat
                 if (cbCountry.Checked)
                 {
                     Score++;
-                    MessageBox.Show("Correct");
                 }
             }
 
@@ -423,7 +417,6 @@ namespace SkyBeat
                 if (cbPop.Checked && cbRock.Checked)
                 {
                     Score++;
-                    MessageBox.Show("Correct");
                 }
             }
 
