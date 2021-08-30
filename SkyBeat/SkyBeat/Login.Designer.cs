@@ -49,6 +49,7 @@ namespace SkyBeat
             this.lblPlayer = new System.Windows.Forms.Label();
             this.lblViewPlayers = new System.Windows.Forms.Label();
             this.rtxtViewAll = new System.Windows.Forms.RichTextBox();
+            this.lblBack = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbEarphones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLockIcon)).BeginInit();
@@ -250,12 +251,24 @@ namespace SkyBeat
             this.rtxtViewAll.TabIndex = 19;
             this.rtxtViewAll.Text = "";
             // 
+            // lblBack
+            // 
+            this.lblBack.AutoSize = true;
+            this.lblBack.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBack.Location = new System.Drawing.Point(373, 306);
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Size = new System.Drawing.Size(36, 16);
+            this.lblBack.TabIndex = 20;
+            this.lblBack.Text = "Back";
+            this.lblBack.Click += new System.EventHandler(this.lblBack_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(734, 361);
+            this.Controls.Add(this.lblBack);
             this.Controls.Add(this.rtxtViewAll);
             this.Controls.Add(this.lblViewPlayers);
             this.Controls.Add(this.lblPlayer);
@@ -315,5 +328,6 @@ namespace SkyBeat
         private System.Windows.Forms.Label lblPlayer;
         private System.Windows.Forms.Label lblViewPlayers;
         private System.Windows.Forms.RichTextBox rtxtViewAll;
+        private System.Windows.Forms.Label lblBack;
     }
 }

@@ -22,6 +22,9 @@ namespace SkyBeat
         SqlConnection connection;
         SqlCommand cmd;
         SqlDataReader dr;
+        frmStart strt = new frmStart();
+        frmMainGame main = new frmMainGame();
+        frmMain mainmenu = new frmMain();
 
         public frmLogin()
         {
@@ -120,8 +123,6 @@ namespace SkyBeat
                     if (loginCount == ModeNumber)
                     {
                         this.Hide();
-                        frmStart strt = new frmStart();
-                        frmMainGame main = new frmMainGame();
                         main.ReceiveMode(loginCompare[0], loginCompare[1], ModeNumber);
                         strt.Show();
                     }
@@ -259,6 +260,12 @@ namespace SkyBeat
         {
             rtxtViewAll.Hide();
             rtxtViewAll.Clear();
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            mainmenu.Show();
+            this.Hide();
         }
 
         public int CompareTo(object obj)
