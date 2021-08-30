@@ -81,6 +81,11 @@ namespace SkyBeat
 
         private void frmScoreboard_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnSaveGame_Click(object sender, EventArgs e)
+        {
             string userid = "";
             string userid2 = "";
             string lose = "Lose";
@@ -116,7 +121,7 @@ namespace SkyBeat
             reader.Close();
 
             cmd.CommandText = "INSERT INTO UserHistory(UserID, Score, Time, WinOrLose)" +
-                "VALUES ('" +  userid2 + "','" + lblLoserscore + "','" + lblLosertime + "','" + lose + "')";
+                "VALUES ('" + userid2 + "','" + lblLoserscore + "','" + lblLosertime + "','" + lose + "')";
             cmd.ExecuteNonQuery();
 
             connection.Close();

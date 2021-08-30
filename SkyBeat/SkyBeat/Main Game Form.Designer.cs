@@ -38,6 +38,8 @@ namespace SkyBeat
             this.cbHipHop = new System.Windows.Forms.CheckBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlGame = new System.Windows.Forms.Panel();
+            this.lblPlayer = new System.Windows.Forms.Label();
+            this.btnNext = new System.Windows.Forms.Button();
             this.lblQuestion = new System.Windows.Forms.Label();
             this.pbMnM = new System.Windows.Forms.PictureBox();
             this.btnLinkin = new System.Windows.Forms.Button();
@@ -47,8 +49,6 @@ namespace SkyBeat
             this.btnHooba = new System.Windows.Forms.Button();
             this.btnDolly = new System.Windows.Forms.Button();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.lblPlayer = new System.Windows.Forms.Label();
-            this.btnNext = new System.Windows.Forms.Button();
             this.pnlGame.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMnM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBQuestions)).BeginInit();
@@ -165,6 +165,28 @@ namespace SkyBeat
             this.pnlGame.Size = new System.Drawing.Size(484, 301);
             this.pnlGame.TabIndex = 10;
             // 
+            // lblPlayer
+            // 
+            this.lblPlayer.AutoSize = true;
+            this.lblPlayer.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayer.Location = new System.Drawing.Point(245, 4);
+            this.lblPlayer.Name = "lblPlayer";
+            this.lblPlayer.Size = new System.Drawing.Size(41, 15);
+            this.lblPlayer.TabIndex = 11;
+            this.lblPlayer.Text = "Player";
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.White;
+            this.btnNext.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.Location = new System.Drawing.Point(370, 254);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(100, 30);
+            this.btnNext.TabIndex = 12;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
             // lblQuestion
             // 
             this.lblQuestion.AutoSize = true;
@@ -200,7 +222,7 @@ namespace SkyBeat
             this.PicBQuestions.Location = new System.Drawing.Point(6, 34);
             this.PicBQuestions.Name = "PicBQuestions";
             this.PicBQuestions.Size = new System.Drawing.Size(190, 154);
-            this.PicBQuestions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicBQuestions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBQuestions.TabIndex = 0;
             this.PicBQuestions.TabStop = false;
             // 
@@ -253,28 +275,6 @@ namespace SkyBeat
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 3;
             this.pbLogo.TabStop = false;
-            // 
-            // lblPlayer
-            // 
-            this.lblPlayer.AutoSize = true;
-            this.lblPlayer.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayer.Location = new System.Drawing.Point(245, 4);
-            this.lblPlayer.Name = "lblPlayer";
-            this.lblPlayer.Size = new System.Drawing.Size(41, 15);
-            this.lblPlayer.TabIndex = 11;
-            this.lblPlayer.Text = "Player";
-            // 
-            // btnNext
-            // 
-            this.btnNext.BackColor = System.Drawing.Color.White;
-            this.btnNext.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.Location = new System.Drawing.Point(381, 254);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(100, 30);
-            this.btnNext.TabIndex = 12;
-            this.btnNext.Text = "Next";
-            this.btnNext.UseVisualStyleBackColor = false;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // frmMainGame
             // 

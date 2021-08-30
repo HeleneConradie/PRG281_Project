@@ -42,6 +42,7 @@ namespace SkyBeat
                 , MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (exit == DialogResult.Yes)
             {
+                thread1.Abort();
                 Application.Exit();
             }
 
@@ -59,7 +60,7 @@ namespace SkyBeat
         public event Delegate1 MessageEvent;
 
         frmStart start = new frmStart();
-        frmScoreboard scoreboard = new frmScoreboard();
+        frmScoreboard screb = new frmScoreboard();
         Random rnd = new Random();
         string genre = "What Genre does the artist belong to?";
         string lyrics = "Who sings the song that the lyrics belongs to?";
@@ -81,11 +82,6 @@ namespace SkyBeat
 
         public void ScoreCalculator()
         {
-            if (modeNum == 1)
-            {
-                lblPlayer.Hide();
-            }
-            frmScoreboard screb = new frmScoreboard();
             MessageEvent += Message;
             while (Count < 10)
             {
@@ -103,47 +99,52 @@ namespace SkyBeat
                 switch (Questions[QCount])
                 {
                     case 1:
-                        PicBQuestions.BackgroundImage = Properties.Resources.Elvis_Presley;
+                        PicBQuestions.Image = Properties.Resources.Elvis_Presley;
                         lblQuestion.Text = genre;
+                    UncheckCheckboxes();
                     pbMnM.Hide();
                     ButtonHide();
-                        CheckBoxShow();
+                   CheckBoxShow();
                         btnNext.Show();
                         break;
                     case 2:
-                        PicBQuestions.BackgroundImage = Properties.Resources.SlipKnot;
+                        PicBQuestions.Image = Properties.Resources.SlipKnot;
                         lblQuestion.Text = genre;
+                    UncheckCheckboxes();
                     pbMnM.Hide();
                     ButtonHide();
                         CheckBoxShow();
                         btnNext.Show();
                         break;
                     case 3:
-                        PicBQuestions.BackgroundImage = Properties.Resources.Eminem;
+                        PicBQuestions.Image = Properties.Resources.Eminem;
                         pbMnM.Show();
                         lblQuestion.Text = genre;
-                        ButtonHide();
+                    UncheckCheckboxes();
+                    ButtonHide();
                         CheckBoxShow();
                         btnNext.Show();
                         break;
                     case 4:
-                        PicBQuestions.BackgroundImage = Properties.Resources.BillyRayCyrus;
+                        PicBQuestions.Image = Properties.Resources.BillyRayCyrus;
                         lblQuestion.Text = genre;
+                    UncheckCheckboxes();
                     pbMnM.Hide();
                     ButtonHide();
                         CheckBoxShow();
                         btnNext.Show();
                         break;
                     case 5:
-                        PicBQuestions.BackgroundImage = Properties.Resources.KatyPerry;
+                        PicBQuestions.Image = Properties.Resources.KatyPerry;
                         lblQuestion.Text = genre;
+                    UncheckCheckboxes();
                     pbMnM.Hide();
                     ButtonHide();
                         CheckBoxShow();
                         btnNext.Show();
                         break;
                     case 6:
-                        PicBQuestions.BackgroundImage = Properties.Resources.JoleneLyrics;
+                        PicBQuestions.Image = Properties.Resources.JoleneLyrics;
                         lblQuestion.Text = lyrics;
                     pbMnM.Hide();
                     CheckBoxHide();
@@ -151,7 +152,7 @@ namespace SkyBeat
                         btnNext.Hide();
                         break;
                     case 7:
-                        PicBQuestions.BackgroundImage = Properties.Resources.AwaySunLyrics;
+                        PicBQuestions.Image = Properties.Resources.AwaySunLyrics;
                         lblQuestion.Text = lyrics;
                     pbMnM.Hide();
                     CheckBoxHide();
@@ -159,7 +160,7 @@ namespace SkyBeat
                         btnNext.Hide();
                         break;
                     case 8:
-                        PicBQuestions.BackgroundImage = Properties.Resources.RiseLyrics;
+                        PicBQuestions.Image = Properties.Resources.RiseLyrics;
                         lblQuestion.Text = lyrics;
                     pbMnM.Hide();
                     CheckBoxHide();
@@ -167,7 +168,7 @@ namespace SkyBeat
                         btnNext.Hide();
                         break;
                     case 9:
-                        PicBQuestions.BackgroundImage = Properties.Resources.OutOfControlLyics;
+                        PicBQuestions.Image = Properties.Resources.OutOfControlLyics;
                         lblQuestion.Text = lyrics;
                     pbMnM.Hide();
                     CheckBoxHide();
@@ -175,7 +176,7 @@ namespace SkyBeat
                         btnNext.Hide();
                         break;
                     case 10:
-                        PicBQuestions.BackgroundImage = Properties.Resources.WithYouLyrics;
+                        PicBQuestions.Image = Properties.Resources.WithYouLyrics;
                         lblQuestion.Text = lyrics;
                     pbMnM.Hide();
                     CheckBoxHide();
@@ -185,6 +186,7 @@ namespace SkyBeat
                 }
             
             QCount++;
+            MessageEvent += Message;
             if (QCount == 10)
             {
                 if (modeNum == 1)
@@ -194,11 +196,11 @@ namespace SkyBeat
                     score1 = Score;
                     screb.Show();
                     screb.SinglePlayer(player1, score1, timefinish);
+                    this.Hide();
                 }
                 else if ((modeNum == 2) && (lblPlayer.Text == "Player 1"))
                 {
-                    time1 = 60 - timefinish;
-                    MessageEvent();
+                    time1 = 60 - StartTime;
                     score1 = Score;
                     QuestionNumber = 0;
                     Score = 0;
@@ -210,7 +212,7 @@ namespace SkyBeat
                 else
                 {
                     score2 = Score;
-                    time2 = 60 - timefinish;
+                    time2 = 60 - StartTime;
                     if (score1 > score2)
                     {
                         screb.Multiplayer(player1, score1, time1, player2, score2, time2, player1, player2);
@@ -231,10 +233,11 @@ namespace SkyBeat
                     }
 
                     thread1.Abort();
-                    MessageEvent();
-                    Hide();
+                    this.Hide();
+                    screb.Show();
 
                 }
+                MessageEvent();
             }
 
         }
@@ -262,11 +265,16 @@ namespace SkyBeat
                 StartTime--;
                 Thread.Sleep(1000);
             }
-            DialogResult time = MessageBox.Show("Your time is up", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            if (time == DialogResult.OK)
-            {
-                scoreboard.Show();
-            }
+            MessageBox.Show("Your time is up", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void UncheckCheckboxes()
+        {
+            cbCountry.Checked = false;
+            cbHipHop.Checked = false;
+            cbMetal.Checked = false;
+            cbPop.Checked = false;
+            cbRock.Checked = false;
         }
 
         public void ButtonHide()

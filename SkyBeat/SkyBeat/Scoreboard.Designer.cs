@@ -48,6 +48,7 @@ namespace SkyBeat
             this.btnPlayAgain = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnMainMenu = new System.Windows.Forms.Button();
+            this.btnSaveGame = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -209,7 +210,7 @@ namespace SkyBeat
             // 
             this.btnPlayAgain.BackColor = System.Drawing.Color.White;
             this.btnPlayAgain.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlayAgain.Location = new System.Drawing.Point(102, 333);
+            this.btnPlayAgain.Location = new System.Drawing.Point(12, 333);
             this.btnPlayAgain.Name = "btnPlayAgain";
             this.btnPlayAgain.Size = new System.Drawing.Size(150, 30);
             this.btnPlayAgain.TabIndex = 16;
@@ -241,6 +242,18 @@ namespace SkyBeat
             this.btnMainMenu.UseVisualStyleBackColor = false;
             this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
             // 
+            // btnSaveGame
+            // 
+            this.btnSaveGame.BackColor = System.Drawing.Color.White;
+            this.btnSaveGame.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveGame.Location = new System.Drawing.Point(187, 333);
+            this.btnSaveGame.Name = "btnSaveGame";
+            this.btnSaveGame.Size = new System.Drawing.Size(150, 30);
+            this.btnSaveGame.TabIndex = 19;
+            this.btnSaveGame.Text = "Save Game";
+            this.btnSaveGame.UseVisualStyleBackColor = false;
+            this.btnSaveGame.Click += new System.EventHandler(this.btnSaveGame_Click);
+            // 
             // frmScoreboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,6 +261,7 @@ namespace SkyBeat
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(684, 411);
             this.ControlBox = false;
+            this.Controls.Add(this.btnSaveGame);
             this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnPlayAgain);
@@ -300,5 +314,6 @@ namespace SkyBeat
         private System.Windows.Forms.Button btnPlayAgain;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnMainMenu;
+        private System.Windows.Forms.Button btnSaveGame;
     }
 }
