@@ -115,6 +115,7 @@
     <EmbeddedResource Include="Terms and Conditions.resx">
       <DependentUpon>Terms and Conditions.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagramSkyBeat.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

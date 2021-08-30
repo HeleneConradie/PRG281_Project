@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SkyBeat.frmMainGame">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="SkyBeat.frmMainGame.Time" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Main Game Form.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="SkyBeat.frmMainGame.Delegate1" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Main Game Form.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>4hS2gkBKEiAQGAgwQmCIQBQDLCghFdEMCAgEIiIACEA=</HashCode>
+      <FileName>Main Game Form.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SkyBeat.frmMain">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAACKAAAAAAAACAAEgCAAACAgAAAEAAAAAAAAA=</HashCode>
+      <FileName>Main Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkyBeat.frmScoreboard">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAAoAJARECAAAASIAACDAAwiAGgsAAAAgQQEAABAAAA=</HashCode>
+      <FileName>Scoreboard.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SkyBeat.frmSignup">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAGRCgKSEAAAUAgQbhIkgCAsEBYYgIoBDAAgAIAAw=</HashCode>
+      <FileName>Sign Up.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkyBeat.frmTnC">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAJAAACAAQADoBQCAAAACAAAABAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Terms and Conditions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkyBeat.frmLogin">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAABAAAAACFEAAUAQACBAB0CMEAMCZDEAFAggABIRkQ=</HashCode>
+      <FileName>Login.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="SkyBeat.IScoreBoard">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>IScoreBoard.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SkyBeat.IFinishMessage">
+    <Position X="11" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>IFinishMessage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
