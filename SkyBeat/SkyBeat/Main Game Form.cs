@@ -29,7 +29,9 @@ namespace SkyBeat
         public int time2;
         public string UserChoice = "";
         public int[] Questions = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        //public int[] Questions = { 9, 1, 5, 7, 3, 8, 6, 2, 10, 4 };
         public int Count = 0;
+        string correctanswer = "";
 
         public frmMainGame()
         {
@@ -82,11 +84,10 @@ namespace SkyBeat
 
         public void ScoreCalculator()
         {
-            MessageEvent += Message;
             while (Count < 10)
             {
                 Random rd = new Random();
-                int rand_num = rd.Next(1, 11);
+                int rand_num = rd.Next(0, 11);
                 var result = Array.Find(Questions, element => element == rand_num);
                 if (result == 0)
                 {
@@ -101,6 +102,7 @@ namespace SkyBeat
                     case 1:
                         PicBQuestions.Image = Properties.Resources.Elvis_Presley;
                         lblQuestion.Text = genre;
+                    correctanswer = "Elvis";
                     UncheckCheckboxes();
                     pbMnM.Hide();
                     ButtonHide();
@@ -110,6 +112,7 @@ namespace SkyBeat
                     case 2:
                         PicBQuestions.Image = Properties.Resources.SlipKnot;
                         lblQuestion.Text = genre;
+                    correctanswer = "Slipknot";
                     UncheckCheckboxes();
                     pbMnM.Hide();
                     ButtonHide();
@@ -120,6 +123,7 @@ namespace SkyBeat
                         PicBQuestions.Image = Properties.Resources.Eminem;
                         pbMnM.Show();
                         lblQuestion.Text = genre;
+                    correctanswer = "Eminem";
                     UncheckCheckboxes();
                     ButtonHide();
                         CheckBoxShow();
@@ -128,6 +132,7 @@ namespace SkyBeat
                     case 4:
                         PicBQuestions.Image = Properties.Resources.BillyRayCyrus;
                         lblQuestion.Text = genre;
+                    correctanswer = "BRC";
                     UncheckCheckboxes();
                     pbMnM.Hide();
                     ButtonHide();
@@ -137,6 +142,7 @@ namespace SkyBeat
                     case 5:
                         PicBQuestions.Image = Properties.Resources.KatyPerry;
                         lblQuestion.Text = genre;
+                    correctanswer = "Katy";
                     UncheckCheckboxes();
                     pbMnM.Hide();
                     ButtonHide();
@@ -146,6 +152,7 @@ namespace SkyBeat
                     case 6:
                         PicBQuestions.Image = Properties.Resources.JoleneLyrics;
                         lblQuestion.Text = lyrics;
+                    correctanswer = "Jolene";
                     pbMnM.Hide();
                     CheckBoxHide();
                         ButtonShow();
@@ -154,6 +161,7 @@ namespace SkyBeat
                     case 7:
                         PicBQuestions.Image = Properties.Resources.AwaySunLyrics;
                         lblQuestion.Text = lyrics;
+                    correctanswer = "AFTS";
                     pbMnM.Hide();
                     CheckBoxHide();
                         ButtonShow();
@@ -162,6 +170,7 @@ namespace SkyBeat
                     case 8:
                         PicBQuestions.Image = Properties.Resources.RiseLyrics;
                         lblQuestion.Text = lyrics;
+                    correctanswer = "Rise";
                     pbMnM.Hide();
                     CheckBoxHide();
                         ButtonShow();
@@ -170,6 +179,7 @@ namespace SkyBeat
                     case 9:
                         PicBQuestions.Image = Properties.Resources.OutOfControlLyics;
                         lblQuestion.Text = lyrics;
+                    correctanswer = "OOC";
                     pbMnM.Hide();
                     CheckBoxHide();
                         ButtonShow();
@@ -178,6 +188,7 @@ namespace SkyBeat
                     case 10:
                         PicBQuestions.Image = Properties.Resources.WithYouLyrics;
                         lblQuestion.Text = lyrics;
+                    correctanswer = "WithYou";
                     pbMnM.Hide();
                     CheckBoxHide();
                         ButtonShow();
@@ -186,7 +197,6 @@ namespace SkyBeat
                 }
             
             QCount++;
-            MessageEvent += Message;
             if (QCount == 10)
             {
                 if (modeNum == 1)
@@ -235,9 +245,10 @@ namespace SkyBeat
                     thread1.Abort();
                     this.Hide();
                     screb.Show();
-
                 }
+                MessageEvent += Message;
                 MessageEvent();
+                MessageEvent -= Message;
             }
 
         }
@@ -321,88 +332,98 @@ namespace SkyBeat
 
         private void btnKaty_Click(object sender, EventArgs e)
         {
-            if (QCount == 8)
+            if (correctanswer == "Rise")
             {
                 Score++;
+                MessageBox.Show("Correct");
             }
             ScoreCalculator();
         }
 
         private void btnDoorsDown_Click(object sender, EventArgs e)
         {
-            if (QCount == 7)
+            if (correctanswer == "AFTS")
             {
                 Score++;
+                MessageBox.Show("Correct");
             }
             ScoreCalculator();
         }
 
         private void btnHooba_Click(object sender, EventArgs e)
         {
-            if (QCount == 9)
+            if (correctanswer == "OOC")
             {
                 Score++;
+                MessageBox.Show("Correct");
             }
             ScoreCalculator();
         }
 
         private void btnDolly_Click(object sender, EventArgs e)
         {
-            if (QCount == 6)
+            if (correctanswer == "Jolene")
             {
                 Score++;
+                MessageBox.Show("Correct");
             }
             ScoreCalculator();
         }
 
         private void btnLinkin_Click(object sender, EventArgs e)
         {
-            if (QCount == 10)
+            if (correctanswer == "WithYou")
             {
                 Score++;
+                MessageBox.Show("Correct");
             }
             ScoreCalculator();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (QCount == 1)
+            if (correctanswer == "Elvis")
             {
                 if (cbRock.Checked && cbCountry.Checked)
                 {
                     Score++;
+                    MessageBox.Show("Correct");
                 }
             }
 
-            else if (QCount == 2)
+            else if (correctanswer == "Slipknot")
             {
                 if (cbMetal.Checked)
                 {
                     Score++;
+                    MessageBox.Show("Correct");
                 }
             }
 
-            else if (QCount == 3)
+            else if (correctanswer == "Eminem")
             {
                 if (cbHipHop.Checked)
                 {
                     Score++;
+                    MessageBox.Show("Correct");
                 }
             }
 
-            else if (QCount == 4)
+            else if (correctanswer == "BRC")
             {
                 if (cbCountry.Checked)
                 {
                     Score++;
+                    MessageBox.Show("Correct");
                 }
             }
 
-            else if (QCount == 5)
+            else if (correctanswer == "Katy")
             {
                 if (cbPop.Checked && cbRock.Checked)
                 {
                     Score++;
+                    MessageBox.Show("Correct");
                 }
             }
 
